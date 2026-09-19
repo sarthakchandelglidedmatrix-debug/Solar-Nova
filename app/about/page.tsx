@@ -88,23 +88,23 @@ export default function AboutPage() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <main className="min-h-screen overflow-hidden bg-[#03100b] text-white">
+    <main className="min-h-screen overflow-hidden bg-[#F8F7F1] text-[#024827]">
       {/* ================= BACKGROUND ================= */}
       <div className="pointer-events-none fixed inset-0 -z-10">
-        <div className="solar-background absolute inset-0 opacity-70" />
-        <div className="solar-grid absolute inset-0 opacity-10" />
+        <div className="solar-background absolute inset-0 opacity-35" />
+        <div className="solar-grid absolute inset-0 opacity-[0.035]" />
 
-        <div className="absolute left-[-15%] top-[10%] h-[400px] w-[400px] rounded-full bg-lime-400/10 blur-[120px]" />
+        <div className="absolute left-[-15%] top-[10%] h-[400px] w-[400px] rounded-full bg-[#FDEC80]/30 blur-[120px]" />
 
-        <div className="absolute right-[-15%] top-[45%] h-[400px] w-[400px] rounded-full bg-emerald-400/10 blur-[120px]" />
+        <div className="absolute right-[-15%] top-[45%] h-[400px] w-[400px] rounded-full bg-[#8EB568]/20 blur-[120px]" />
       </div>
 
       {/* ================= NAVBAR ================= */}
       <nav
         className={`fixed left-0 right-0 top-0 z-50 border-b backdrop-blur-xl transition-all duration-300 ${
           menuOpen
-            ? "border-lime-300/20 bg-[#03100b]/95"
-            : "border-white/10 bg-[#03100b]/85"
+            ? "border-[#D9E4D2] bg-[#F8F7F1]/98"
+            : "border-[#D9E4D2] bg-[#F8F7F1]/90"
         }`}
       >
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -115,35 +115,44 @@ export default function AboutPage() {
               onClick={() => setMenuOpen(false)}
               className="flex items-center gap-3"
             >
-              <div className="flex h-9 w-9 items-center justify-center rounded-full border border-lime-300/30 bg-lime-300/10">
-                <Sun className="h-4 w-4 text-lime-300" />
+              <div className="flex h-9 w-9 items-center justify-center rounded-full border border-[#F4C51F]/50 bg-[#FDEC80]">
+                <Sun className="h-4 w-4 text-[#024827]" />
               </div>
 
               <div>
-                <div className="text-base font-bold tracking-wide">
-                  Solar<span className="text-lime-300">Nova</span>
+                <div className="text-base font-bold tracking-wide text-[#024827]">
+                  Solar<span className="text-[#0A572A]">Nova</span>
                 </div>
 
-                <div className="text-[8px] uppercase tracking-[0.22em] text-white/35">
+                <div className="text-[8px] uppercase tracking-[0.22em] text-[#6B7D70]">
                   Clean Energy
                 </div>
               </div>
             </Link>
 
-            {/* Desktop Navigation */}
+            {/* ================= DESKTOP NAVIGATION ================= */}
             <div className="hidden items-center gap-7 md:flex">
+              {/* Home */}
+              <Link
+                href="/"
+                className="text-sm text-[#45604D] transition hover:text-[#0A572A]"
+              >
+                Home
+              </Link>
+
+              {/* Solutions */}
               <Link
                 href="/solutions"
-                className="text-sm text-white/65 transition hover:text-lime-300"
+                className="text-sm text-[#45604D] transition hover:text-[#0A572A]"
               >
                 Solutions
               </Link>
 
-              {/* About Dropdown */}
+              {/* ================= ABOUT DROPDOWN ================= */}
               <div className="group relative py-6">
                 <Link
                   href="/about"
-                  className="flex items-center gap-1.5 text-sm text-lime-300"
+                  className="flex items-center gap-1.5 text-sm font-medium text-[#0A572A]"
                 >
                   About
 
@@ -152,40 +161,63 @@ export default function AboutPage() {
                   </span>
                 </Link>
 
-                <div className="pointer-events-none invisible absolute left-1/2 top-[62px] w-[235px] -translate-x-1/2 translate-y-2 opacity-0 transition-all duration-200 group-hover:pointer-events-auto group-hover:visible group-hover:translate-y-0 group-hover:opacity-100">
-                  <div className="rounded-2xl border border-white/10 bg-[#071810]/95 p-2 shadow-2xl backdrop-blur-xl">
+                <div className="pointer-events-none invisible absolute left-1/2 top-[62px] w-[255px] -translate-x-1/2 translate-y-2 opacity-0 transition-all duration-200 group-hover:pointer-events-auto group-hover:visible group-hover:translate-y-0 group-hover:opacity-100">
+                  <div className="rounded-2xl border border-[#D9E4D2] bg-[#F3F6EE]/98 p-2 shadow-xl backdrop-blur-xl">
+
+                    {/* ABOUT US - CURRENT PAGE */}
                     <Link
-                      href="/about/board-of-directors"
-                      className="block rounded-xl px-4 py-3 transition hover:bg-lime-300/10"
+                      href="/about"
+                      className="block rounded-xl bg-[#E7EFE0] px-4 py-3 transition hover:bg-[#DCE9D4]"
                     >
                       <div className="flex items-center gap-3">
-                        <Users className="h-4 w-4 text-lime-300" />
+                        <Sun className="h-4 w-4 text-[#0A572A]" />
 
                         <div>
-                          <div className="text-sm font-medium text-white">
+                          <div className="text-sm font-semibold text-[#024827]">
+                            About Us
+                          </div>
+
+                          <div className="mt-0.5 text-[11px] text-[#0A572A]">
+                            SolarNova
+                          </div>
+                        </div>
+                      </div>
+                    </Link>
+
+                    {/* BOARD OF DIRECTORS */}
+                    <Link
+                      href="/about/board-of-directors"
+                      className="block rounded-xl px-4 py-3 transition hover:bg-[#E7EFE0]"
+                    >
+                      <div className="flex items-center gap-3">
+                        <Users className="h-4 w-4 text-[#0A572A]" />
+
+                        <div>
+                          <div className="text-sm font-medium text-[#024827]">
                             Board of Directors
                           </div>
 
-                          <div className="mt-0.5 text-[11px] text-white/40">
+                          <div className="mt-0.5 text-[11px] text-[#6B7D70]">
                             Our leadership
                           </div>
                         </div>
                       </div>
                     </Link>
 
+                    {/* AWARDS */}
                     <Link
                       href="/about/awards"
-                      className="block rounded-xl px-4 py-3 transition hover:bg-lime-300/10"
+                      className="block rounded-xl px-4 py-3 transition hover:bg-[#E7EFE0]"
                     >
                       <div className="flex items-center gap-3">
-                        <Award className="h-4 w-4 text-lime-300" />
+                        <Award className="h-4 w-4 text-[#0A572A]" />
 
                         <div>
-                          <div className="text-sm font-medium text-white">
+                          <div className="text-sm font-medium text-[#024827]">
                             Awards & Certification
                           </div>
 
-                          <div className="mt-0.5 text-[11px] text-white/40">
+                          <div className="mt-0.5 text-[11px] text-[#6B7D70]">
                             Recognition
                           </div>
                         </div>
@@ -195,22 +227,24 @@ export default function AboutPage() {
                 </div>
               </div>
 
+              {/* Blog */}
               <Link
                 href="/blog"
-                className="text-sm text-white/65 transition hover:text-lime-300"
+                className="text-sm text-[#45604D] transition hover:text-[#0A572A]"
               >
                 Blog
               </Link>
 
+              {/* Get Started */}
               <Link
                 href="/contact"
-                className="rounded-full border border-lime-100/40 bg-lime-100/90 px-5 py-2.5 text-sm font-semibold text-[#18301f] shadow-lg shadow-lime-300/10 transition-all duration-300 hover:bg-white hover:shadow-lime-200/20"
+                className="rounded-full border border-[#F4C51F]/50 bg-[#F4C51F] px-5 py-2.5 text-sm font-semibold text-[#024827] shadow-lg shadow-[#F4C51F]/20 transition-all duration-300 hover:bg-[#FDEC80] hover:shadow-[#F4C51F]/30"
               >
                 Get Started
               </Link>
             </div>
 
-            {/* Mobile Menu Button */}
+            {/* ================= MOBILE MENU BUTTON ================= */}
             <button
               type="button"
               onClick={() => setMenuOpen((prev) => !prev)}
@@ -218,67 +252,88 @@ export default function AboutPage() {
               aria-expanded={menuOpen}
               className={`flex h-10 w-10 items-center justify-center rounded-xl border transition-all duration-300 md:hidden ${
                 menuOpen
-                  ? "border-lime-300/30 bg-lime-300/10 text-lime-300"
-                  : "border-white/10 bg-white/5 text-white"
+                  ? "border-[#8EB568] bg-[#E7EFE0] text-[#0A572A]"
+                  : "border-[#D9E4D2] bg-[#EEF3E8] text-[#024827]"
               }`}
             >
               {menuOpen ? <X size={21} /> : <Menu size={21} />}
             </button>
           </div>
 
-          {/* Mobile Dropdown */}
+          {/* ================= MOBILE MENU ================= */}
           {menuOpen && (
             <motion.div
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.2 }}
-              className="border-t border-white/10 py-3 md:hidden"
+              className="border-t border-[#D9E4D2] py-3 md:hidden"
             >
               <div className="flex flex-col gap-1.5">
+
+                {/* Home */}
+                <Link
+                  href="/"
+                  onClick={() => setMenuOpen(false)}
+                  className="rounded-xl px-4 py-3 text-sm text-[#45604D] transition hover:bg-[#E7EFE0] hover:text-[#0A572A]"
+                >
+                  Home
+                </Link>
+
+                {/* Solutions */}
                 <Link
                   href="/solutions"
                   onClick={() => setMenuOpen(false)}
-                  className="rounded-xl px-4 py-3 text-sm text-white/75 transition hover:bg-lime-300/10 hover:text-lime-300"
+                  className="rounded-xl px-4 py-3 text-sm text-[#45604D] transition hover:bg-[#E7EFE0] hover:text-[#0A572A]"
                 >
                   Solutions
                 </Link>
 
-                <Link
-                  href="/about"
-                  onClick={() => setMenuOpen(false)}
-                  className="rounded-xl bg-lime-300/10 px-4 py-3 text-sm text-lime-300"
-                >
-                  About
-                </Link>
+                {/* ================= ABOUT ================= */}
+                <div className="rounded-xl bg-[#E7EFE0] p-1">
+                  <Link
+                    href="/about"
+                    onClick={() => setMenuOpen(false)}
+                    className="flex items-center gap-2 rounded-lg px-3 py-3 text-sm font-semibold text-[#0A572A]"
+                  >
+                    <Sun className="h-4 w-4" />
+                    About Us
+                  </Link>
 
-                <Link
-                  href="/about/board-of-directors"
-                  onClick={() => setMenuOpen(false)}
-                  className="rounded-xl px-4 py-3 pl-8 text-sm text-white/55 transition hover:bg-lime-300/10 hover:text-lime-300"
-                >
-                  Board of Directors
-                </Link>
+                  {/* Board */}
+                  <Link
+                    href="/about/board-of-directors"
+                    onClick={() => setMenuOpen(false)}
+                    className="flex items-center gap-2 rounded-lg px-4 py-3 pl-8 text-sm text-[#6B7D70] transition hover:bg-[#DCE9D4] hover:text-[#0A572A]"
+                  >
+                    <Users className="h-4 w-4" />
+                    Board of Directors
+                  </Link>
 
-                <Link
-                  href="/about/awards"
-                  onClick={() => setMenuOpen(false)}
-                  className="rounded-xl px-4 py-3 pl-8 text-sm text-white/55 transition hover:bg-lime-300/10 hover:text-lime-300"
-                >
-                  Awards & Certification
-                </Link>
+                  {/* Awards */}
+                  <Link
+                    href="/about/awards"
+                    onClick={() => setMenuOpen(false)}
+                    className="flex items-center gap-2 rounded-lg px-4 py-3 pl-8 text-sm text-[#6B7D70] transition hover:bg-[#DCE9D4] hover:text-[#0A572A]"
+                  >
+                    <Award className="h-4 w-4" />
+                    Awards & Certification
+                  </Link>
+                </div>
 
+                {/* Blog */}
                 <Link
                   href="/blog"
                   onClick={() => setMenuOpen(false)}
-                  className="rounded-xl px-4 py-3 text-sm text-white/75 transition hover:bg-lime-300/10 hover:text-lime-300"
+                  className="rounded-xl px-4 py-3 text-sm text-[#45604D] transition hover:bg-[#E7EFE0] hover:text-[#0A572A]"
                 >
                   Blog
                 </Link>
 
+                {/* Get Started */}
                 <Link
                   href="/contact"
                   onClick={() => setMenuOpen(false)}
-                  className="mt-2 rounded-xl bg-lime-100/90 px-4 py-3 text-center text-sm font-semibold text-[#18301f] transition hover:bg-white"
+                  className="mt-2 rounded-xl bg-[#F4C51F] px-4 py-3 text-center text-sm font-semibold text-[#024827] transition hover:bg-[#FDEC80]"
                 >
                   Get Started
                 </Link>
@@ -290,7 +345,6 @@ export default function AboutPage() {
 
       {/* ================= HERO WITH SOLAR VIDEO ================= */}
       <section className="relative min-h-[650px] overflow-hidden px-6 pb-16 pt-32 lg:min-h-[700px] lg:px-8 lg:pb-20 lg:pt-36">
-        {/* Solar Video Background */}
         <div className="absolute inset-0 z-0 overflow-hidden">
           <video
             autoPlay
@@ -303,13 +357,13 @@ export default function AboutPage() {
             <source src="/Vidoes/solar-bg.mp4" type="video/mp4" />
           </video>
 
-          <div className="absolute inset-0 bg-[#03100b]/35" />
+          <div className="absolute inset-0 bg-[#F8F7F1]/55" />
 
-          <div className="absolute inset-0 bg-gradient-to-r from-[#03100b]/80 via-[#03100b]/40 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#F8F7F1]/95 via-[#F8F7F1]/65 to-transparent" />
 
-          <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-[#03100b]/80 to-transparent" />
+          <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-[#F8F7F1]/95 to-transparent" />
 
-          <div className="absolute inset-x-0 bottom-0 h-48 bg-gradient-to-t from-[#03100b] to-transparent" />
+          <div className="absolute inset-x-0 bottom-0 h-52 bg-gradient-to-t from-[#F8F7F1] to-transparent" />
         </div>
 
         <div className="relative z-10 mx-auto max-w-7xl">
@@ -319,24 +373,24 @@ export default function AboutPage() {
             transition={{ duration: 0.7 }}
             className="max-w-3xl"
           >
-            <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-lime-200/30 bg-black/25 px-4 py-2 text-[11px] uppercase tracking-[0.2em] text-lime-200 backdrop-blur-md">
+            <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-[#8EB568]/50 bg-[#FDEC80]/80 px-4 py-2 text-[11px] uppercase tracking-[0.2em] text-[#024827] backdrop-blur-md">
               <Leaf className="h-3 w-3" />
               About SolarNova
             </div>
 
-            <h1 className="text-4xl font-semibold leading-tight sm:text-5xl lg:text-6xl">
+            <h1 className="text-4xl font-semibold leading-tight text-[#024827] sm:text-5xl lg:text-6xl">
               Powering a{" "}
-              <span className="text-lime-200">cleaner tomorrow.</span>
+              <span className="text-[#0A572A]">cleaner tomorrow.</span>
             </h1>
 
-            <p className="mt-5 max-w-2xl text-base leading-7 text-white/70 sm:text-lg">
+            <p className="mt-5 max-w-2xl text-base leading-7 text-[#45604D] sm:text-lg">
               SolarNova creates practical solar solutions for homes,
               businesses and large-scale energy projects, combining clean
               energy with modern technology.
             </p>
           </motion.div>
 
-          <div className="mt-12 grid grid-cols-2 overflow-hidden rounded-2xl border border-white/15 bg-black/25 backdrop-blur-lg md:grid-cols-4">
+          <div className="mt-12 grid grid-cols-2 overflow-hidden rounded-2xl border border-[#D9E4D2] bg-[#F3F6EE]/90 backdrop-blur-lg md:grid-cols-4">
             {[
               "Clean Energy",
               "Smart Systems",
@@ -345,13 +399,13 @@ export default function AboutPage() {
             ].map((item, index) => (
               <div
                 key={item}
-                className="border-b border-white/10 px-5 py-5 last:border-0 md:border-b-0 md:border-r md:last:border-r-0"
+                className="border-b border-[#D9E4D2] px-5 py-5 last:border-0 md:border-b-0 md:border-r md:last:border-r-0"
               >
-                <div className="text-[10px] tracking-[0.18em] text-lime-200/75">
+                <div className="text-[10px] tracking-[0.18em] text-[#0A572A]">
                   0{index + 1}
                 </div>
 
-                <div className="mt-2 text-sm font-medium text-white/90">
+                <div className="mt-2 text-sm font-medium text-[#024827]">
                   {item}
                 </div>
               </div>
@@ -364,16 +418,16 @@ export default function AboutPage() {
       <section className="px-6 py-14 lg:px-8 lg:py-20">
         <div className="mx-auto max-w-7xl">
           <div className="mb-12 max-w-2xl">
-            <div className="mb-3 text-[11px] uppercase tracking-[0.22em] text-lime-300">
+            <div className="mb-3 text-[11px] uppercase tracking-[0.22em] text-[#0A572A]">
               What We Do
             </div>
 
-            <h2 className="text-3xl font-semibold sm:text-4xl">
+            <h2 className="text-3xl font-semibold text-[#024827] sm:text-4xl">
               Solar solutions built for{" "}
-              <span className="text-lime-300">real needs.</span>
+              <span className="text-[#0A572A]">real needs.</span>
             </h2>
 
-            <p className="mt-4 text-sm leading-7 text-white/45">
+            <p className="mt-4 text-sm leading-7 text-[#5B6F62]">
               From residential rooftops to large solar farms, our solutions
               focus on clean energy, reliable performance and smart
               technology.
@@ -394,7 +448,7 @@ export default function AboutPage() {
                     : ""
                 }`}
               >
-                <div className="group relative h-[280px] overflow-hidden rounded-3xl border border-white/10 bg-white/5 sm:h-[340px]">
+                <div className="group relative h-[280px] overflow-hidden rounded-3xl border border-[#D9E4D2] bg-[#EEF3E8] sm:h-[340px]">
                   <Image
                     src={section.image}
                     alt={section.label}
@@ -404,35 +458,35 @@ export default function AboutPage() {
                     className="object-cover transition duration-700 group-hover:scale-105"
                   />
 
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#03100b]/65 via-transparent to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#024827]/55 via-transparent to-transparent" />
 
-                  <div className="absolute bottom-4 left-4 rounded-full border border-white/15 bg-black/40 px-3 py-1.5 text-[10px] text-white/75 backdrop-blur-md">
+                  <div className="absolute bottom-4 left-4 rounded-full border border-[#F8F7F1]/50 bg-[#024827]/70 px-3 py-1.5 text-[10px] text-[#F8F7F1] backdrop-blur-md">
                     {section.number} / SolarNova
                   </div>
                 </div>
 
                 <div className="max-w-xl">
                   <div className="mb-3 flex items-center gap-3">
-                    <span className="text-xs tracking-[0.18em] text-lime-300">
+                    <span className="text-xs tracking-[0.18em] text-[#0A572A]">
                       {section.number}
                     </span>
 
-                    <span className="h-px w-8 bg-lime-300/30" />
+                    <span className="h-px w-8 bg-[#8EB568]" />
 
-                    <span className="text-[10px] uppercase tracking-[0.18em] text-white/35">
+                    <span className="text-[10px] uppercase tracking-[0.18em] text-[#6B7D70]">
                       {section.label}
                     </span>
                   </div>
 
-                  <h3 className="text-2xl font-semibold leading-tight sm:text-3xl">
+                  <h3 className="text-2xl font-semibold leading-tight text-[#024827] sm:text-3xl">
                     {section.title}
                   </h3>
 
-                  <p className="mt-4 text-sm leading-7 text-white/45">
+                  <p className="mt-4 text-sm leading-7 text-[#5B6F62]">
                     {section.description}
                   </p>
 
-                  <div className="mt-5 flex items-center gap-2 text-xs text-lime-300">
+                  <div className="mt-5 flex items-center gap-2 text-xs text-[#0A572A]">
                     <CheckCircle2 className="h-4 w-4" />
                     Designed for long-term performance
                   </div>
@@ -444,16 +498,16 @@ export default function AboutPage() {
       </section>
 
       {/* ================= VALUES ================= */}
-      <section className="border-y border-white/10 bg-white/[0.02] px-6 py-16 lg:px-8">
+      <section className="border-y border-[#D9E4D2] bg-[#EEF3E8] px-6 py-16 lg:px-8">
         <div className="mx-auto max-w-7xl">
           <div className="mb-9">
-            <div className="mb-3 text-[11px] uppercase tracking-[0.22em] text-lime-300">
+            <div className="mb-3 text-[11px] uppercase tracking-[0.22em] text-[#0A572A]">
               Our Values
             </div>
 
-            <h2 className="text-3xl font-semibold sm:text-4xl">
+            <h2 className="text-3xl font-semibold text-[#024827] sm:text-4xl">
               What guides{" "}
-              <span className="text-lime-300">our work.</span>
+              <span className="text-[#0A572A]">our work.</span>
             </h2>
           </div>
 
@@ -464,15 +518,17 @@ export default function AboutPage() {
               return (
                 <div
                   key={value.title}
-                  className="rounded-2xl border border-white/10 bg-white/[0.025] p-5"
+                  className="rounded-2xl border border-[#D9E4D2] bg-[#F8F7F1] p-5 transition-all duration-300 hover:-translate-y-1 hover:border-[#8EB568]"
                 >
-                  <div className="mb-4 flex h-9 w-9 items-center justify-center rounded-xl bg-lime-300/10 text-lime-300">
+                  <div className="mb-4 flex h-9 w-9 items-center justify-center rounded-xl bg-[#FDEC80] text-[#024827]">
                     <Icon className="h-4 w-4" />
                   </div>
 
-                  <h3 className="text-sm font-semibold">{value.title}</h3>
+                  <h3 className="text-sm font-semibold text-[#024827]">
+                    {value.title}
+                  </h3>
 
-                  <p className="mt-2 text-xs leading-6 text-white/40">
+                  <p className="mt-2 text-xs leading-6 text-[#5B6F62]">
                     {value.text}
                   </p>
                 </div>
@@ -486,59 +542,59 @@ export default function AboutPage() {
       <section className="px-6 py-16 lg:px-8 lg:py-20">
         <div className="mx-auto max-w-7xl">
           <div className="mb-9">
-            <div className="mb-3 text-[11px] uppercase tracking-[0.22em] text-lime-300">
+            <div className="mb-3 text-[11px] uppercase tracking-[0.22em] text-[#0A572A]">
               SolarNova
             </div>
 
-            <h2 className="text-3xl font-semibold sm:text-4xl">
-              People & <span className="text-lime-300">progress.</span>
+            <h2 className="text-3xl font-semibold text-[#024827] sm:text-4xl">
+              People & <span className="text-[#0A572A]">progress.</span>
             </h2>
           </div>
 
           <div className="grid gap-4 md:grid-cols-2">
             <Link
               href="/about/board-of-directors"
-              className="group rounded-2xl border border-white/10 bg-white/[0.025] p-6 transition hover:border-lime-300/20 hover:bg-lime-300/[0.04]"
+              className="group rounded-2xl border border-[#D9E4D2] bg-[#F3F6EE] p-6 transition hover:border-[#8EB568] hover:bg-[#EEF3E8]"
             >
-              <div className="mb-5 flex h-10 w-10 items-center justify-center rounded-xl bg-lime-300/10 text-lime-300">
+              <div className="mb-5 flex h-10 w-10 items-center justify-center rounded-xl bg-[#FDEC80] text-[#024827]">
                 <Users className="h-4 w-4" />
               </div>
 
               <div className="flex items-center justify-between">
                 <div>
-                  <div className="text-[10px] uppercase tracking-[0.18em] text-white/35">
+                  <div className="text-[10px] uppercase tracking-[0.18em] text-[#6B7D70]">
                     Leadership
                   </div>
 
-                  <h3 className="mt-2 text-xl font-semibold">
+                  <h3 className="mt-2 text-xl font-semibold text-[#024827]">
                     Board of Directors
                   </h3>
                 </div>
 
-                <ArrowRight className="h-5 w-5 text-lime-300 transition group-hover:translate-x-1" />
+                <ArrowRight className="h-5 w-5 text-[#0A572A] transition group-hover:translate-x-1" />
               </div>
             </Link>
 
             <Link
               href="/about/awards"
-              className="group rounded-2xl border border-white/10 bg-white/[0.025] p-6 transition hover:border-lime-300/20 hover:bg-lime-300/[0.04]"
+              className="group rounded-2xl border border-[#D9E4D2] bg-[#F3F6EE] p-6 transition hover:border-[#8EB568] hover:bg-[#EEF3E8]"
             >
-              <div className="mb-5 flex h-10 w-10 items-center justify-center rounded-xl bg-lime-300/10 text-lime-300">
+              <div className="mb-5 flex h-10 w-10 items-center justify-center rounded-xl bg-[#FDEC80] text-[#024827]">
                 <Award className="h-4 w-4" />
               </div>
 
               <div className="flex items-center justify-between">
                 <div>
-                  <div className="text-[10px] uppercase tracking-[0.18em] text-white/35">
+                  <div className="text-[10px] uppercase tracking-[0.18em] text-[#6B7D70]">
                     Recognition
                   </div>
 
-                  <h3 className="mt-2 text-xl font-semibold">
+                  <h3 className="mt-2 text-xl font-semibold text-[#024827]">
                     Awards & Certification
                   </h3>
                 </div>
 
-                <ArrowRight className="h-5 w-5 text-lime-300 transition group-hover:translate-x-1" />
+                <ArrowRight className="h-5 w-5 text-[#0A572A] transition group-hover:translate-x-1" />
               </div>
             </Link>
           </div>
@@ -548,21 +604,21 @@ export default function AboutPage() {
       {/* ================= CTA ================= */}
       <section className="px-6 pb-16 lg:px-8 lg:pb-20">
         <div className="mx-auto max-w-7xl">
-          <div className="rounded-3xl border border-lime-300/15 bg-lime-300/[0.05] px-6 py-12 text-center sm:px-10">
-            <Sun className="mx-auto mb-4 h-7 w-7 text-lime-300" />
+          <div className="rounded-3xl border border-[#F4C51F]/50 bg-[#FDEC80] px-6 py-12 text-center shadow-sm sm:px-10">
+            <Sun className="mx-auto mb-4 h-7 w-7 text-[#024827]" />
 
-            <h2 className="text-3xl font-semibold sm:text-4xl">
+            <h2 className="text-3xl font-semibold text-[#024827] sm:text-4xl">
               Ready for a cleaner energy future?
             </h2>
 
-            <p className="mx-auto mt-4 max-w-xl text-sm leading-7 text-white/45">
+            <p className="mx-auto mt-4 max-w-xl text-sm leading-7 text-[#45604D]">
               Let&apos;s explore the right solar solution for your energy
               needs.
             </p>
 
             <Link
               href="/contact"
-              className="mt-7 inline-flex items-center gap-2 rounded-full border border-lime-100/40 bg-lime-100/90 px-6 py-3 text-sm font-semibold text-[#18301f] shadow-lg shadow-lime-300/10 transition-all duration-300 hover:bg-white hover:shadow-lime-200/20"
+              className="mt-7 inline-flex items-center gap-2 rounded-full border border-[#0A572A] bg-[#0A572A] px-6 py-3 text-sm font-semibold text-[#F8F7F1] shadow-lg shadow-[#0A572A]/15 transition-all duration-300 hover:bg-[#024827] hover:shadow-[#0A572A]/25"
             >
               Get Started
               <ArrowRight className="h-4 w-4" />
@@ -572,31 +628,32 @@ export default function AboutPage() {
       </section>
 
       {/* ================= FOOTER ================= */}
-      <footer className="border-t border-white/10 px-6 py-10 lg:px-8">
+      <footer className="border-t border-[#D9E4D2] bg-[#E7EFE0] px-6 py-10 lg:px-8">
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-10 md:grid-cols-3">
+
             {/* Brand */}
             <div>
               <Link
                 href="/"
                 className="inline-flex items-center gap-2"
               >
-                <div className="flex h-9 w-9 items-center justify-center rounded-full border border-lime-300/30 bg-lime-300/10">
-                  <Sun className="h-4 w-4 text-lime-300" />
+                <div className="flex h-9 w-9 items-center justify-center rounded-full border border-[#F4C51F]/50 bg-[#FDEC80]">
+                  <Sun className="h-4 w-4 text-[#024827]" />
                 </div>
 
                 <div>
-                  <div className="text-sm font-semibold">
-                    Solar<span className="text-lime-300">Nova</span>
+                  <div className="text-sm font-semibold text-[#024827]">
+                    Solar<span className="text-[#0A572A]">Nova</span>
                   </div>
 
-                  <div className="text-[8px] uppercase tracking-[0.2em] text-white/30">
+                  <div className="text-[8px] uppercase tracking-[0.2em] text-[#6B7D70]">
                     Clean Energy
                   </div>
                 </div>
               </Link>
 
-              <p className="mt-4 max-w-xs text-xs leading-6 text-white/35">
+              <p className="mt-4 max-w-xs text-xs leading-6 text-[#5B6F62]">
                 Practical solar solutions for homes, businesses and
                 large-scale energy projects.
               </p>
@@ -604,42 +661,42 @@ export default function AboutPage() {
 
             {/* Explore */}
             <div>
-              <div className="mb-4 text-[10px] uppercase tracking-[0.2em] text-lime-300">
+              <div className="mb-4 text-[10px] uppercase tracking-[0.2em] text-[#0A572A]">
                 Explore
               </div>
 
               <div className="grid grid-cols-2 gap-x-8 gap-y-3">
                 <Link
                   href="/"
-                  className="text-xs text-white/50 transition hover:text-lime-300"
+                  className="text-xs text-[#5B6F62] transition hover:text-[#0A572A]"
                 >
                   Home
                 </Link>
 
                 <Link
                   href="/solutions"
-                  className="text-xs text-white/50 transition hover:text-lime-300"
+                  className="text-xs text-[#5B6F62] transition hover:text-[#0A572A]"
                 >
                   Solutions
                 </Link>
 
                 <Link
                   href="/about"
-                  className="text-xs text-white/50 transition hover:text-lime-300"
+                  className="text-xs font-medium text-[#0A572A] transition hover:text-[#024827]"
                 >
-                  About
+                  About Us
                 </Link>
 
                 <Link
                   href="/blog"
-                  className="text-xs text-white/50 transition hover:text-lime-300"
+                  className="text-xs text-[#5B6F62] transition hover:text-[#0A572A]"
                 >
                   Blog
                 </Link>
 
                 <Link
                   href="/contact"
-                  className="text-xs text-white/50 transition hover:text-lime-300"
+                  className="text-xs text-[#5B6F62] transition hover:text-[#0A572A]"
                 >
                   Contact
                 </Link>
@@ -648,66 +705,73 @@ export default function AboutPage() {
 
             {/* Company */}
             <div>
-              <div className="mb-4 text-[10px] uppercase tracking-[0.2em] text-lime-300">
+              <div className="mb-4 text-[10px] uppercase tracking-[0.2em] text-[#0A572A]">
                 Company
               </div>
 
               <div className="flex flex-col gap-3">
                 <Link
+                  href="/about"
+                  className="text-xs font-medium text-[#0A572A] transition hover:text-[#024827]"
+                >
+                  About Us
+                </Link>
+
+                <Link
                   href="/about/board-of-directors"
-                  className="text-xs text-white/50 transition hover:text-lime-300"
+                  className="text-xs text-[#5B6F62] transition hover:text-[#0A572A]"
                 >
                   Board of Directors
                 </Link>
 
                 <Link
                   href="/about/awards"
-                  className="text-xs text-white/50 transition hover:text-lime-300"
+                  className="text-xs text-[#5B6F62] transition hover:text-[#0A572A]"
                 >
                   Awards & Certification
-                </Link>
-
-                <Link
-                  href="/about"
-                  className="text-xs text-white/50 transition hover:text-lime-300"
-                >
-                  About SolarNova
                 </Link>
               </div>
             </div>
           </div>
 
-          <div className="mt-10 flex flex-col justify-between gap-3 border-t border-white/10 pt-6 md:flex-row md:items-center">
-            <div className="text-[11px] text-white/25">
+          <div className="mt-10 flex flex-col justify-between gap-3 border-t border-[#CBD9C5] pt-6 md:flex-row md:items-center">
+            <div className="text-[11px] text-[#6B7D70]">
               © {new Date().getFullYear()} SolarNova. Clean energy for a
               brighter tomorrow.
             </div>
 
             <div className="flex flex-wrap gap-5">
               <Link
+                href="/"
+                className="text-[11px] text-[#6B7D70] transition hover:text-[#0A572A]"
+              >
+                Home
+              </Link>
+
+              <Link
                 href="/solutions"
-                className="text-[11px] text-white/30 transition hover:text-lime-300"
+                className="text-[11px] text-[#6B7D70] transition hover:text-[#0A572A]"
               >
                 Solutions
               </Link>
 
               <Link
                 href="/about"
-                className="text-[11px] text-white/30 transition hover:text-lime-300"
+                className="text-[11px] font-medium text-[#0A572A] transition hover:text-[#024827]"
               >
-                About
+                About Us
               </Link>
 
               <Link
                 href="/blog"
-                className="text-[11px] text-white/30 transition hover:text-lime-300"
+                className="text-[11px] text-[#6B7D70] transition hover:text-[#0A572A]"
               >
                 Blog
               </Link>
 
               <Link
                 href="/contact"
-                className="text-[11px] text-white/30 transition hover:text-lime-300"
+                className="text-[11px] text-[#6B7D70] transition hover:text-[#0A572A]"
               >
                 Contact
               </Link>

@@ -66,63 +66,60 @@ const directors = [
 
 export default function BoardOfDirectorsPage() {
   return (
-    <main className="min-h-screen overflow-hidden bg-[#03100b] text-white">
-
+    <main className="min-h-screen overflow-hidden bg-[#F8F7F1] text-[#024827]">
       {/* ========================================================= */}
       {/* BACKGROUND */}
       {/* ========================================================= */}
 
       <div className="pointer-events-none fixed inset-0 -z-10">
-        <div className="solar-background absolute inset-0 opacity-70" />
-        <div className="solar-grid absolute inset-0 opacity-10" />
+        <div className="solar-background absolute inset-0 opacity-35" />
+        <div className="solar-grid absolute inset-0 opacity-[0.035]" />
 
-        <div className="absolute left-[-15%] top-[10%] h-[400px] w-[400px] rounded-full bg-lime-400/10 blur-[120px]" />
+        <div className="absolute left-[-15%] top-[10%] h-[400px] w-[400px] rounded-full bg-[#FDEC80]/30 blur-[120px]" />
 
-        <div className="absolute right-[-15%] top-[45%] h-[400px] w-[400px] rounded-full bg-emerald-400/10 blur-[120px]" />
+        <div className="absolute right-[-15%] top-[45%] h-[400px] w-[400px] rounded-full bg-[#8EB568]/20 blur-[120px]" />
       </div>
 
       {/* ========================================================= */}
       {/* NAVBAR */}
       {/* ========================================================= */}
 
-      <nav className="fixed left-0 right-0 top-0 z-50 border-b border-white/10 bg-[#03100b]/85 backdrop-blur-xl">
+      <nav className="fixed left-0 right-0 top-0 z-50 border-b border-[#D9E4D2] bg-[#F8F7F1]/90 backdrop-blur-xl">
         <div className="mx-auto flex h-[72px] max-w-7xl items-center justify-between px-6 lg:px-8">
-
           {/* LOGO */}
-          <Link href="/" className="flex items-center gap-3">
 
-            <div className="flex h-9 w-9 items-center justify-center rounded-full border border-lime-300/30 bg-lime-300/10">
-              <Sun className="h-4 w-4 text-lime-300" />
+          <Link href="/" className="flex items-center gap-3">
+            <div className="flex h-9 w-9 items-center justify-center rounded-full border border-[#F4C51F]/50 bg-[#FDEC80]">
+              <Sun className="h-4 w-4 text-[#024827]" />
             </div>
 
             <div>
-              <div className="text-base font-bold tracking-wide">
-                Solar<span className="text-lime-300">Nova</span>
+              <div className="text-base font-bold tracking-wide text-[#024827]">
+                Solar<span className="text-[#0A572A]">Nova</span>
               </div>
 
-              <div className="text-[8px] uppercase tracking-[0.22em] text-white/35">
+              <div className="text-[8px] uppercase tracking-[0.22em] text-[#6B7D70]">
                 Clean Energy
               </div>
             </div>
-
           </Link>
 
           {/* NAVIGATION */}
-          <div className="hidden items-center gap-7 md:flex">
 
+          <div className="hidden items-center gap-7 md:flex">
             <Link
               href="/solutions"
-              className="text-sm text-white/65 transition hover:text-lime-300"
+              className="text-sm text-[#45604D] transition hover:text-[#0A572A]"
             >
               Solutions
             </Link>
 
             {/* ABOUT DROPDOWN */}
-            <div className="group relative py-6">
 
+            <div className="group relative py-6">
               <Link
                 href="/about"
-                className="flex items-center gap-1.5 text-sm text-lime-300"
+                className="flex items-center gap-1.5 text-sm font-medium text-[#0A572A]"
               >
                 About
 
@@ -132,77 +129,62 @@ export default function BoardOfDirectorsPage() {
               </Link>
 
               <div className="pointer-events-none invisible absolute left-1/2 top-[62px] w-[235px] -translate-x-1/2 translate-y-2 opacity-0 transition-all duration-200 group-hover:pointer-events-auto group-hover:visible group-hover:translate-y-0 group-hover:opacity-100">
-
-                <div className="rounded-2xl border border-white/10 bg-[#071810]/95 p-2 shadow-2xl backdrop-blur-xl">
-
+                <div className="rounded-2xl border border-[#D9E4D2] bg-[#F3F6EE]/98 p-2 shadow-xl backdrop-blur-xl">
                   <Link
                     href="/about/board-of-directors"
-                    className="block rounded-xl bg-lime-300/10 px-4 py-3 transition hover:bg-lime-300/15"
+                    className="block rounded-xl bg-[#E7EFE0] px-4 py-3 transition hover:bg-[#DCE9D5]"
                   >
-
                     <div className="flex items-center gap-3">
-
-                      <Users className="h-4 w-4 text-lime-300" />
+                      <Users className="h-4 w-4 text-[#0A572A]" />
 
                       <div>
-                        <div className="text-sm font-medium text-white">
+                        <div className="text-sm font-medium text-[#024827]">
                           Board of Directors
                         </div>
 
-                        <div className="mt-0.5 text-[11px] text-white/40">
+                        <div className="mt-0.5 text-[11px] text-[#6B7D70]">
                           Our leadership
                         </div>
                       </div>
-
                     </div>
-
                   </Link>
 
                   <Link
                     href="/about/awards"
-                    className="block rounded-xl px-4 py-3 transition hover:bg-lime-300/10"
+                    className="block rounded-xl px-4 py-3 transition hover:bg-[#E7EFE0]"
                   >
-
                     <div className="flex items-center gap-3">
-
-                      <Award className="h-4 w-4 text-lime-300" />
+                      <Award className="h-4 w-4 text-[#0A572A]" />
 
                       <div>
-                        <div className="text-sm font-medium text-white">
+                        <div className="text-sm font-medium text-[#024827]">
                           Awards & Certification
                         </div>
 
-                        <div className="mt-0.5 text-[11px] text-white/40">
+                        <div className="mt-0.5 text-[11px] text-[#6B7D70]">
                           Recognition
                         </div>
                       </div>
-
                     </div>
-
                   </Link>
-
                 </div>
-
               </div>
-
             </div>
 
             <Link
               href="/blog"
-              className="text-sm text-white/65 transition hover:text-lime-300"
+              className="text-sm text-[#45604D] transition hover:text-[#0A572A]"
             >
               Blog
             </Link>
 
             <Link
               href="/contact"
-              className="rounded-full border border-lime-100/40 bg-lime-100/90 px-5 py-2.5 text-sm font-semibold text-[#18301f] shadow-lg shadow-lime-300/10 transition-all duration-300 hover:bg-white hover:shadow-lime-200/20"
+              className="rounded-full border border-[#F4C51F]/50 bg-[#F4C51F] px-5 py-2.5 text-sm font-semibold text-[#024827] shadow-lg shadow-[#F4C51F]/20 transition-all duration-300 hover:bg-[#FDEC80] hover:shadow-[#F4C51F]/30"
             >
               Get Started
             </Link>
-
           </div>
-
         </div>
       </nav>
 
@@ -211,11 +193,9 @@ export default function BoardOfDirectorsPage() {
       {/* ========================================================= */}
 
       <section className="relative min-h-[650px] overflow-hidden px-6 pb-20 pt-36 lg:min-h-[700px] lg:px-8 lg:pb-24 lg:pt-44">
-
         {/* VIDEO BACKGROUND */}
 
         <div className="absolute inset-0 z-0 overflow-hidden">
-
           <video
             autoPlay
             muted
@@ -224,89 +204,71 @@ export default function BoardOfDirectorsPage() {
             preload="auto"
             className="absolute inset-0 h-full w-full object-cover object-center"
           >
-            <source
-              src="/Vidoes/solar-bg.mp4"
-              type="video/mp4"
-            />
+            <source src="/Vidoes/solar-bg.mp4" type="video/mp4" />
           </video>
 
-          {/* Main dark overlay */}
-          <div className="absolute inset-0 bg-[#03100b]/45" />
+          {/* Light overlay */}
+          <div className="absolute inset-0 bg-[#F8F7F1]/55" />
 
           {/* Text readability gradient */}
-          <div className="absolute inset-0 bg-gradient-to-r from-[#03100b]/90 via-[#03100b]/55 to-[#03100b]/20" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#F8F7F1]/95 via-[#F8F7F1]/70 to-[#F8F7F1]/20" />
 
           {/* Top fade */}
-          <div className="absolute inset-x-0 top-0 h-36 bg-gradient-to-b from-[#03100b]/90 to-transparent" />
+          <div className="absolute inset-x-0 top-0 h-36 bg-gradient-to-b from-[#F8F7F1]/95 to-transparent" />
 
           {/* Bottom fade */}
-          <div className="absolute inset-x-0 bottom-0 h-56 bg-gradient-to-t from-[#03100b] to-transparent" />
+          <div className="absolute inset-x-0 bottom-0 h-56 bg-gradient-to-t from-[#F8F7F1] to-transparent" />
 
-          {/* Green glow */}
-          <div className="absolute left-[-10%] top-[15%] h-[400px] w-[400px] rounded-full bg-lime-400/10 blur-[120px]" />
-
+          {/* Solar glow */}
+          <div className="absolute left-[-10%] top-[15%] h-[400px] w-[400px] rounded-full bg-[#FDEC80]/25 blur-[120px]" />
         </div>
 
         {/* HERO CONTENT */}
 
         <div className="relative z-10 mx-auto max-w-7xl">
-
           <motion.div
             initial={{ opacity: 0, y: 25 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
             className="max-w-3xl"
           >
-
             {/* BREADCRUMB */}
 
-            <div className="mb-5 flex items-center gap-2 text-[10px] uppercase tracking-[0.2em] text-white/40">
-
+            <div className="mb-5 flex items-center gap-2 text-[10px] uppercase tracking-[0.2em] text-[#6B7D70]">
               <Link
                 href="/about"
-                className="transition hover:text-lime-300"
+                className="transition hover:text-[#0A572A]"
               >
                 About
               </Link>
 
               <span>/</span>
 
-              <span className="text-lime-300/90">
-                Leadership
-              </span>
-
+              <span className="text-[#0A572A]">Leadership</span>
             </div>
 
             {/* BADGE */}
 
-            <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-lime-200/30 bg-black/25 px-4 py-2 text-[11px] uppercase tracking-[0.2em] text-lime-200 backdrop-blur-md">
-
+            <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-[#8EB568]/50 bg-[#FDEC80]/80 px-4 py-2 text-[11px] uppercase tracking-[0.2em] text-[#024827] backdrop-blur-md">
               <Users className="h-3 w-3" />
 
               Our Leadership
-
             </div>
 
             {/* HEADING */}
 
-            <h1 className="text-4xl font-semibold leading-tight sm:text-5xl lg:text-6xl">
-
+            <h1 className="text-4xl font-semibold leading-tight text-[#024827] sm:text-5xl lg:text-6xl">
               Board of{" "}
-
-              <span className="text-lime-200">
-                Directors.
-              </span>
-
+              <span className="text-[#0A572A]">Directors.</span>
             </h1>
 
             {/* DESCRIPTION */}
 
-            <p className="mt-5 max-w-2xl text-base leading-7 text-white/70 sm:text-lg">
+            <p className="mt-5 max-w-2xl text-base leading-7 text-[#45604D] sm:text-lg">
               Meet the leadership team guiding SolarNova with experience,
               strategic vision and a commitment to building a cleaner
               energy future.
             </p>
-
           </motion.div>
 
           {/* HERO STATS */}
@@ -318,41 +280,33 @@ export default function BoardOfDirectorsPage() {
               duration: 0.7,
               delay: 0.15,
             }}
-            className="mt-12 grid grid-cols-2 overflow-hidden rounded-2xl border border-white/15 bg-black/25 backdrop-blur-lg md:grid-cols-4"
+            className="mt-12 grid grid-cols-2 overflow-hidden rounded-2xl border border-[#D9E4D2] bg-[#F3F6EE]/90 backdrop-blur-lg md:grid-cols-4"
           >
-
             {[
               ["01", "Leadership"],
               ["02", "Experience"],
               ["03", "Governance"],
               ["04", "Vision"],
             ].map(([number, label], index) => (
-
               <div
                 key={number}
                 className={`px-5 py-5 ${
                   index !== 3
-                    ? "border-b border-white/10 md:border-b-0 md:border-r"
+                    ? "border-b border-[#D9E4D2] md:border-b-0 md:border-r"
                     : ""
                 }`}
               >
-
-                <div className="text-[10px] tracking-[0.18em] text-lime-200/75">
+                <div className="text-[10px] tracking-[0.18em] text-[#0A572A]">
                   {number}
                 </div>
 
-                <div className="mt-2 text-sm font-medium text-white/90">
+                <div className="mt-2 text-sm font-medium text-[#024827]">
                   {label}
                 </div>
-
               </div>
-
             ))}
-
           </motion.div>
-
         </div>
-
       </section>
 
       {/* ========================================================= */}
@@ -360,44 +314,36 @@ export default function BoardOfDirectorsPage() {
       {/* ========================================================= */}
 
       <section className="px-6 py-14 lg:px-8 lg:py-20">
-
         <div className="mx-auto max-w-7xl">
-
           {/* INTRO */}
 
           <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
-
             <div>
-
-              <div className="mb-3 text-[11px] uppercase tracking-[0.22em] text-lime-300">
+              <div className="mb-3 text-[11px] uppercase tracking-[0.22em] text-[#0A572A]">
                 Leadership
               </div>
 
-              <h2 className="text-3xl font-semibold sm:text-4xl">
+              <h2 className="text-3xl font-semibold text-[#024827] sm:text-4xl">
                 Experience that{" "}
-                <span className="text-lime-300">
+                <span className="text-[#0A572A]">
                   moves us forward.
                 </span>
               </h2>
-
             </div>
 
-            <p className="max-w-2xl text-sm leading-7 text-white/45">
+            <p className="max-w-2xl text-sm leading-7 text-[#5B6F62]">
               Our Board brings together professionals with experience across
               renewable energy, infrastructure, finance, administration,
               strategy, law and corporate governance. Together, they provide
               the direction and oversight that supports SolarNova&apos;s
               long-term vision.
             </p>
-
           </div>
 
           {/* DIRECTORS */}
 
           <div className="mt-14 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-
             {directors.map((director, index) => (
-
               <motion.article
                 key={director.name}
                 initial={{
@@ -416,13 +362,11 @@ export default function BoardOfDirectorsPage() {
                   duration: 0.55,
                   delay: index * 0.05,
                 }}
-                className="group overflow-hidden rounded-3xl border border-white/10 bg-white/[0.025] transition-all duration-300 hover:-translate-y-1 hover:border-lime-300/20 hover:bg-lime-300/[0.025]"
+                className="group overflow-hidden rounded-3xl border border-[#D9E4D2] bg-[#F3F6EE] transition-all duration-300 hover:-translate-y-1 hover:border-[#8EB568] hover:bg-[#EEF3E8]"
               >
-
                 {/* IMAGE */}
 
-                <div className="relative h-[360px] overflow-hidden bg-[#081b12]">
-
+                <div className="relative h-[360px] overflow-hidden bg-[#E7EFE0]">
                   <Image
                     src={director.image}
                     alt={`${director.name} - SolarNova Board of Directors`}
@@ -432,112 +376,87 @@ export default function BoardOfDirectorsPage() {
                     className="object-cover object-top transition duration-700 group-hover:scale-[1.035]"
                   />
 
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#03100b] via-transparent to-transparent opacity-90" />
+                  {/* Image overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#024827]/80 via-[#024827]/10 to-transparent opacity-90" />
 
                   {/* NUMBER */}
 
-                  <div className="absolute left-5 top-5 rounded-full border border-white/15 bg-black/30 px-3 py-1.5 text-[10px] tracking-[0.18em] text-lime-200 backdrop-blur-md">
+                  <div className="absolute left-5 top-5 rounded-full border border-[#F8F7F1]/60 bg-[#024827]/65 px-3 py-1.5 text-[10px] tracking-[0.18em] text-[#F8F7F1] backdrop-blur-md">
                     {director.number}
                   </div>
 
                   {/* NAME */}
 
                   <div className="absolute bottom-5 left-5 right-5">
-
-                    <div className="text-[10px] uppercase tracking-[0.18em] text-lime-300">
+                    <div className="text-[10px] uppercase tracking-[0.18em] text-[#FDEC80]">
                       SolarNova Leadership
                     </div>
 
-                    <h3 className="mt-2 text-xl font-semibold leading-tight text-white">
+                    <h3 className="mt-2 text-xl font-semibold leading-tight text-[#F8F7F1]">
                       {director.name}
                     </h3>
-
                   </div>
-
                 </div>
 
                 {/* CARD CONTENT */}
 
                 <div className="p-6">
-
                   <div className="flex items-start gap-3">
-
-                    <div className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-xl bg-lime-300/10 text-lime-300">
+                    <div className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-xl bg-[#FDEC80] text-[#024827]">
                       <BriefcaseBusiness className="h-4 w-4" />
                     </div>
 
                     <div>
-
-                      <div className="text-[10px] uppercase tracking-[0.15em] text-white/30">
+                      <div className="text-[10px] uppercase tracking-[0.15em] text-[#6B7D70]">
                         Position
                       </div>
 
-                      <p className="mt-1 text-sm font-medium leading-6 text-lime-200/90">
+                      <p className="mt-1 text-sm font-medium leading-6 text-[#0A572A]">
                         {director.designation}
                       </p>
-
                     </div>
-
                   </div>
 
-                  <div className="my-5 h-px bg-white/10" />
+                  <div className="my-5 h-px bg-[#D9E4D2]" />
 
-                  <p className="text-sm leading-7 text-white/45">
+                  <p className="text-sm leading-7 text-[#5B6F62]">
                     {director.experience}
                   </p>
 
-                  <div className="mt-5 flex items-center gap-2 text-[11px] text-white/30">
-
-                    <ShieldCheck className="h-3.5 w-3.5 text-lime-300/70" />
+                  <div className="mt-5 flex items-center gap-2 text-[11px] text-[#6B7D70]">
+                    <ShieldCheck className="h-3.5 w-3.5 text-[#0A572A]" />
 
                     Leadership & Governance
-
                   </div>
-
                 </div>
-
               </motion.article>
-
             ))}
-
           </div>
-
         </div>
-
       </section>
 
       {/* ========================================================= */}
       {/* GOVERNANCE */}
       {/* ========================================================= */}
 
-      <section className="border-y border-white/10 bg-white/[0.02] px-6 py-16 lg:px-8">
-
+      <section className="border-y border-[#D9E4D2] bg-[#EEF3E8] px-6 py-16 lg:px-8">
         <div className="mx-auto max-w-7xl">
-
           <div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-center">
-
             <div>
-
-              <div className="mb-3 text-[11px] uppercase tracking-[0.22em] text-lime-300">
+              <div className="mb-3 text-[11px] uppercase tracking-[0.22em] text-[#0A572A]">
                 Our Approach
               </div>
 
-              <h2 className="text-3xl font-semibold sm:text-4xl">
-
+              <h2 className="text-3xl font-semibold text-[#024827] sm:text-4xl">
                 Strong leadership.
-
                 <br />
-
-                <span className="text-lime-300">
+                <span className="text-[#0A572A]">
                   Responsible growth.
                 </span>
-
               </h2>
-
             </div>
 
             <div className="grid gap-3 sm:grid-cols-2">
-
               {[
                 {
                   icon: ShieldCheck,
@@ -560,38 +479,30 @@ export default function BoardOfDirectorsPage() {
                   text: "Building solutions for tomorrow's energy needs.",
                 },
               ].map((item) => {
-
                 const Icon = item.icon;
 
                 return (
                   <div
                     key={item.title}
-                    className="rounded-2xl border border-white/10 bg-white/[0.025] p-5"
+                    className="rounded-2xl border border-[#D9E4D2] bg-[#F8F7F1] p-5 transition-all duration-300 hover:border-[#8EB568]"
                   >
-
-                    <div className="mb-4 flex h-9 w-9 items-center justify-center rounded-xl bg-lime-300/10 text-lime-300">
+                    <div className="mb-4 flex h-9 w-9 items-center justify-center rounded-xl bg-[#FDEC80] text-[#024827]">
                       <Icon className="h-4 w-4" />
                     </div>
 
-                    <h3 className="text-sm font-semibold">
+                    <h3 className="text-sm font-semibold text-[#024827]">
                       {item.title}
                     </h3>
 
-                    <p className="mt-2 text-xs leading-6 text-white/40">
+                    <p className="mt-2 text-xs leading-6 text-[#5B6F62]">
                       {item.text}
                     </p>
-
                   </div>
                 );
-
               })}
-
             </div>
-
           </div>
-
         </div>
-
       </section>
 
       {/* ========================================================= */}
@@ -599,225 +510,193 @@ export default function BoardOfDirectorsPage() {
       {/* ========================================================= */}
 
       <section className="px-6 py-16 lg:px-8 lg:py-20">
-
         <div className="mx-auto max-w-7xl">
+          <div className="rounded-3xl border border-[#F4C51F]/50 bg-[#FDEC80] px-6 py-12 text-center shadow-sm sm:px-10">
+            <Sun className="mx-auto mb-4 h-7 w-7 text-[#024827]" />
 
-          <div className="rounded-3xl border border-lime-300/15 bg-lime-300/[0.05] px-6 py-12 text-center sm:px-10">
-
-            <Sun className="mx-auto mb-4 h-7 w-7 text-lime-300" />
-
-            <h2 className="text-3xl font-semibold sm:text-4xl">
+            <h2 className="text-3xl font-semibold text-[#024827] sm:text-4xl">
               Building the future of clean energy.
             </h2>
 
-            <p className="mx-auto mt-4 max-w-xl text-sm leading-7 text-white/45">
+            <p className="mx-auto mt-4 max-w-xl text-sm leading-7 text-[#45604D]">
               Explore our solutions and discover how SolarNova is working
               towards a smarter and more sustainable energy future.
             </p>
 
             <Link
               href="/solutions"
-              className="mt-7 inline-flex items-center gap-2 rounded-full border border-lime-100/40 bg-lime-100/90 px-6 py-3 text-sm font-semibold text-[#18301f] shadow-lg shadow-lime-300/10 transition-all duration-300 hover:bg-white hover:shadow-lime-200/20"
+              className="mt-7 inline-flex items-center gap-2 rounded-full border border-[#0A572A] bg-[#0A572A] px-6 py-3 text-sm font-semibold text-[#F8F7F1] shadow-lg shadow-[#0A572A]/15 transition-all duration-300 hover:bg-[#024827] hover:shadow-[#0A572A]/25"
             >
-
               Explore Solutions
-
               <ArrowRight className="h-4 w-4" />
-
             </Link>
-
           </div>
-
         </div>
-
       </section>
 
       {/* ========================================================= */}
       {/* FOOTER */}
       {/* ========================================================= */}
 
-      <footer className="border-t border-white/10 bg-[#020d0a]">
-
+      <footer className="border-t border-[#CBD9C5] bg-[#E7EFE0]">
         <div className="mx-auto w-full max-w-7xl px-6 py-12 lg:px-8">
-
           <div className="grid gap-10 md:grid-cols-3">
-
             {/* BRAND */}
 
             <div>
-
               <Link href="/" className="flex items-center gap-3">
-
-                <div className="flex h-9 w-9 items-center justify-center rounded-full border border-lime-300/30 bg-lime-300/10">
-                  <Sun className="h-4 w-4 text-lime-300" />
+                <div className="flex h-9 w-9 items-center justify-center rounded-full border border-[#F4C51F]/50 bg-[#FDEC80]">
+                  <Sun className="h-4 w-4 text-[#024827]" />
                 </div>
 
                 <div>
-                  <div className="text-base font-bold tracking-wide">
-                    Solar<span className="text-lime-300">Nova</span>
+                  <div className="text-base font-bold tracking-wide text-[#024827]">
+                    Solar<span className="text-[#0A572A]">Nova</span>
                   </div>
 
-                  <div className="text-[8px] uppercase tracking-[0.22em] text-white/35">
+                  <div className="text-[8px] uppercase tracking-[0.22em] text-[#6B7D70]">
                     Clean Energy
                   </div>
                 </div>
-
               </Link>
 
-              <p className="mt-4 max-w-sm text-sm leading-6 text-white/35">
+              <p className="mt-4 max-w-sm text-sm leading-6 text-[#5B6F62]">
                 Building a smarter and more sustainable energy future through
                 clean solar solutions.
               </p>
-
             </div>
 
             {/* EXPLORE */}
 
             <div>
-
-              <h3 className="text-sm font-semibold text-white">
+              <h3 className="text-sm font-semibold text-[#024827]">
                 Explore
               </h3>
 
               <div className="mt-4 grid gap-3">
-
                 <Link
                   href="/"
-                  className="text-sm text-white/45 transition hover:text-lime-300"
+                  className="text-sm text-[#5B6F62] transition hover:text-[#0A572A]"
                 >
                   Home
                 </Link>
 
                 <Link
                   href="/solutions"
-                  className="text-sm text-white/45 transition hover:text-lime-300"
+                  className="text-sm text-[#5B6F62] transition hover:text-[#0A572A]"
                 >
                   Solutions
                 </Link>
 
                 <Link
                   href="/about"
-                  className="text-sm text-white/45 transition hover:text-lime-300"
+                  className="text-sm text-[#5B6F62] transition hover:text-[#0A572A]"
                 >
                   About
                 </Link>
 
                 <Link
                   href="/blog"
-                  className="text-sm text-white/45 transition hover:text-lime-300"
+                  className="text-sm text-[#5B6F62] transition hover:text-[#0A572A]"
                 >
                   Blog
                 </Link>
 
                 <Link
                   href="/contact"
-                  className="text-sm text-white/45 transition hover:text-lime-300"
+                  className="text-sm text-[#5B6F62] transition hover:text-[#0A572A]"
                 >
                   Contact
                 </Link>
-
               </div>
-
             </div>
 
             {/* COMPANY */}
 
             <div>
-
-              <h3 className="text-sm font-semibold text-white">
+              <h3 className="text-sm font-semibold text-[#024827]">
                 Company
               </h3>
 
               <div className="mt-4 grid gap-3">
-
                 <Link
                   href="/about/board-of-directors"
-                  className="text-sm text-white/45 transition hover:text-lime-300"
+                  className="text-sm text-[#5B6F62] transition hover:text-[#0A572A]"
                 >
                   Board of Directors
                 </Link>
 
                 <Link
                   href="/about/awards"
-                  className="text-sm text-white/45 transition hover:text-lime-300"
+                  className="text-sm text-[#5B6F62] transition hover:text-[#0A572A]"
                 >
                   Awards & Certification
                 </Link>
 
                 <Link
                   href="/about"
-                  className="text-sm text-white/45 transition hover:text-lime-300"
+                  className="text-sm text-[#5B6F62] transition hover:text-[#0A572A]"
                 >
                   About SolarNova
                 </Link>
 
                 <Link
                   href="/solutions"
-                  className="text-sm text-white/45 transition hover:text-lime-300"
+                  className="text-sm text-[#5B6F62] transition hover:text-[#0A572A]"
                 >
                   Our Solutions
                 </Link>
 
                 <Link
                   href="/contact"
-                  className="text-sm text-white/45 transition hover:text-lime-300"
+                  className="text-sm text-[#5B6F62] transition hover:text-[#0A572A]"
                 >
                   Get Started
                 </Link>
-
               </div>
-
             </div>
-
           </div>
 
           {/* BOTTOM FOOTER */}
 
-          <div className="mt-10 flex flex-col justify-between gap-4 border-t border-white/10 pt-6 md:flex-row md:items-center">
-
-            <div className="text-[11px] text-white/25">
+          <div className="mt-10 flex flex-col justify-between gap-4 border-t border-[#CBD9C5] pt-6 md:flex-row md:items-center">
+            <div className="text-[11px] text-[#6B7D70]">
               © {new Date().getFullYear()} SolarNova. Clean energy for a
               brighter tomorrow.
             </div>
 
             <div className="flex flex-wrap gap-5">
-
               <Link
                 href="/solutions"
-                className="text-[11px] text-white/30 transition hover:text-lime-300"
+                className="text-[11px] text-[#6B7D70] transition hover:text-[#0A572A]"
               >
                 Solutions
               </Link>
 
               <Link
                 href="/about"
-                className="text-[11px] text-white/30 transition hover:text-lime-300"
+                className="text-[11px] text-[#6B7D70] transition hover:text-[#0A572A]"
               >
                 About
               </Link>
 
               <Link
                 href="/blog"
-                className="text-[11px] text-white/30 transition hover:text-lime-300"
+                className="text-[11px] text-[#6B7D70] transition hover:text-[#0A572A]"
               >
                 Blog
               </Link>
 
               <Link
                 href="/contact"
-                className="text-[11px] text-white/30 transition hover:text-lime-300"
+                className="text-[11px] text-[#6B7D70] transition hover:text-[#0A572A]"
               >
                 Contact
               </Link>
-
             </div>
-
           </div>
-
         </div>
-
       </footer>
-
     </main>
   );
 }
