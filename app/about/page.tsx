@@ -87,23 +87,23 @@ export default function AboutPage() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <main className="min-h-screen overflow-hidden bg-white text-neutral-900">
+    <main className="min-h-screen overflow-hidden bg-[#FBFAF5] text-[#3F4541]">
       {/* ================= BACKGROUND ================= */}
       <div className="pointer-events-none fixed inset-0 -z-10">
         <div className="solar-background absolute inset-0 opacity-30" />
-        <div className="solar-grid absolute inset-0 opacity-[0.04]" />
+        <div className="solar-grid absolute inset-0 opacity-[0.035]" />
 
-        <div className="absolute left-[-15%] top-[10%] h-[400px] w-[400px] rounded-full bg-neutral-200/50 blur-[120px]" />
+        <div className="absolute left-[-15%] top-[10%] h-[400px] w-[400px] rounded-full bg-[#F6C85F]/20 blur-[120px]" />
 
-        <div className="absolute right-[-15%] top-[45%] h-[400px] w-[400px] rounded-full bg-neutral-300/40 blur-[120px]" />
+        <div className="absolute right-[-15%] top-[45%] h-[400px] w-[400px] rounded-full bg-[#4F8A70]/15 blur-[120px]" />
       </div>
 
       {/* ================= NAVBAR ================= */}
       <nav
         className={`fixed left-0 right-0 top-0 z-50 border-b backdrop-blur-xl transition-all duration-300 ${
           menuOpen
-            ? "border-neutral-200 bg-white/95"
-            : "border-neutral-200/80 bg-white/85"
+            ? "border-[#E4DED0] bg-[#FBFAF5]/95"
+            : "border-[#E4DED0]/80 bg-[#FBFAF5]/85"
         }`}
       >
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -114,16 +114,16 @@ export default function AboutPage() {
               onClick={() => setMenuOpen(false)}
               className="flex items-center gap-3"
             >
-              <div className="flex h-9 w-9 items-center justify-center rounded-full border border-neutral-300 bg-neutral-100">
-                <Sun className="h-4 w-4 text-neutral-800" />
+              <div className="flex h-9 w-9 items-center justify-center rounded-full border border-[#E6A21A]/35 bg-[#F6C85F]/20">
+                <Sun className="h-4 w-4 text-[#E6A21A]" />
               </div>
 
               <div>
-                <div className="text-base font-bold tracking-wide">
-                  Solar<span className="text-neutral-500">Nova</span>
+                <div className="text-base font-bold tracking-wide text-[#3F4541]">
+                  Solar<span className="text-[#E6A21A]">Nova</span>
                 </div>
 
-                <div className="text-[8px] uppercase tracking-[0.22em] text-neutral-400">
+                <div className="text-[8px] uppercase tracking-[0.22em] text-[#8B908A]">
                   Clean Energy
                 </div>
               </div>
@@ -134,7 +134,7 @@ export default function AboutPage() {
               {/* Home */}
               <Link
                 href="/"
-                className="text-sm text-neutral-500 transition hover:text-neutral-900"
+                className="text-sm text-[#6F756F] transition hover:text-[#3F4541]"
               >
                 Home
               </Link>
@@ -142,7 +142,7 @@ export default function AboutPage() {
               {/* Solutions */}
               <Link
                 href="/solutions"
-                className="text-sm text-neutral-500 transition hover:text-neutral-900"
+                className="text-sm text-[#6F756F] transition hover:text-[#3F4541]"
               >
                 Solutions
               </Link>
@@ -151,32 +151,32 @@ export default function AboutPage() {
               <div className="group relative py-6">
                 <Link
                   href="/about"
-                  className="flex items-center gap-1.5 text-sm font-medium text-neutral-900"
+                  className="flex items-center gap-1.5 text-sm font-medium text-[#3F4541]"
                 >
                   About
 
-                  <span className="text-[9px] transition-transform duration-200 group-hover:rotate-180">
+                  <span className="text-[9px] text-[#E6A21A] transition-transform duration-200 group-hover:rotate-180">
                     ▼
                   </span>
                 </Link>
 
-                {/* About Dropdown - 3 OPTIONS */}
+                {/* About Dropdown */}
                 <div className="pointer-events-none invisible absolute left-1/2 top-[62px] w-[245px] -translate-x-1/2 translate-y-2 opacity-0 transition-all duration-200 group-hover:pointer-events-auto group-hover:visible group-hover:translate-y-0 group-hover:opacity-100">
-                  <div className="rounded-2xl border border-neutral-200 bg-white/95 p-2 shadow-2xl backdrop-blur-xl">
+                  <div className="rounded-2xl border border-[#E4DED0] bg-[#FBFAF5]/95 p-2 shadow-xl shadow-[#4F8A70]/10 backdrop-blur-xl">
                     {/* About Us */}
                     <Link
                       href="/about"
-                      className="block rounded-xl bg-neutral-100 px-4 py-3 transition hover:bg-neutral-200"
+                      className="block rounded-xl bg-[#F3EBD8] px-4 py-3 transition hover:bg-[#EDE2C8]"
                     >
                       <div className="flex items-center gap-3">
-                        <Leaf className="h-4 w-4 text-neutral-700" />
+                        <Leaf className="h-4 w-4 text-[#4F8A70]" />
 
                         <div>
-                          <div className="text-sm font-medium text-neutral-900">
+                          <div className="text-sm font-medium text-[#3F4541]">
                             About Us
                           </div>
 
-                          <div className="mt-0.5 text-[11px] text-neutral-400">
+                          <div className="mt-0.5 text-[11px] text-[#8B908A]">
                             About SolarNova
                           </div>
                         </div>
@@ -186,17 +186,17 @@ export default function AboutPage() {
                     {/* Board */}
                     <Link
                       href="/about/board-of-directors"
-                      className="block rounded-xl px-4 py-3 transition hover:bg-neutral-100"
+                      className="block rounded-xl px-4 py-3 transition hover:bg-[#F3EBD8]"
                     >
                       <div className="flex items-center gap-3">
-                        <Users className="h-4 w-4 text-neutral-700" />
+                        <Users className="h-4 w-4 text-[#4F8A70]" />
 
                         <div>
-                          <div className="text-sm font-medium text-neutral-900">
+                          <div className="text-sm font-medium text-[#3F4541]">
                             Board of Directors
                           </div>
 
-                          <div className="mt-0.5 text-[11px] text-neutral-400">
+                          <div className="mt-0.5 text-[11px] text-[#8B908A]">
                             Our leadership
                           </div>
                         </div>
@@ -206,17 +206,17 @@ export default function AboutPage() {
                     {/* Awards */}
                     <Link
                       href="/about/awards"
-                      className="block rounded-xl px-4 py-3 transition hover:bg-neutral-100"
+                      className="block rounded-xl px-4 py-3 transition hover:bg-[#F3EBD8]"
                     >
                       <div className="flex items-center gap-3">
-                        <Award className="h-4 w-4 text-neutral-700" />
+                        <Award className="h-4 w-4 text-[#E6A21A]" />
 
                         <div>
-                          <div className="text-sm font-medium text-neutral-900">
+                          <div className="text-sm font-medium text-[#3F4541]">
                             Awards & Certification
                           </div>
 
-                          <div className="mt-0.5 text-[11px] text-neutral-400">
+                          <div className="mt-0.5 text-[11px] text-[#8B908A]">
                             Recognition
                           </div>
                         </div>
@@ -229,7 +229,7 @@ export default function AboutPage() {
               {/* Blog */}
               <Link
                 href="/blog"
-                className="text-sm text-neutral-500 transition hover:text-neutral-900"
+                className="text-sm text-[#6F756F] transition hover:text-[#3F4541]"
               >
                 Blog
               </Link>
@@ -237,7 +237,7 @@ export default function AboutPage() {
               {/* Get Started */}
               <Link
                 href="/contact"
-                className="rounded-full border border-neutral-800 bg-neutral-900 px-5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-neutral-300/30 transition-all duration-300 hover:bg-neutral-700"
+                className="rounded-full border border-[#E6A21A] bg-[#E6A21A] px-5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-[#E6A21A]/20 transition-all duration-300 hover:bg-[#D49312] hover:shadow-[#E6A21A]/30"
               >
                 Get Started
               </Link>
@@ -251,8 +251,8 @@ export default function AboutPage() {
               aria-expanded={menuOpen}
               className={`flex h-10 w-10 items-center justify-center rounded-xl border transition-all duration-300 md:hidden ${
                 menuOpen
-                  ? "border-neutral-300 bg-neutral-100 text-neutral-900"
-                  : "border-neutral-200 bg-neutral-100 text-neutral-800"
+                  ? "border-[#E6A21A]/40 bg-[#F3EBD8] text-[#3F4541]"
+                  : "border-[#E4DED0] bg-white text-[#3F4541]"
               }`}
             >
               {menuOpen ? <X size={21} /> : <Menu size={21} />}
@@ -265,14 +265,14 @@ export default function AboutPage() {
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.2 }}
-              className="border-t border-neutral-200 py-3 md:hidden"
+              className="border-t border-[#E4DED0] py-3 md:hidden"
             >
               <div className="flex flex-col gap-1.5">
                 {/* Home */}
                 <Link
                   href="/"
                   onClick={() => setMenuOpen(false)}
-                  className="rounded-xl px-4 py-3 text-sm text-neutral-600 transition hover:bg-neutral-100 hover:text-neutral-900"
+                  className="rounded-xl px-4 py-3 text-sm text-[#6F756F] transition hover:bg-[#F3EBD8] hover:text-[#3F4541]"
                 >
                   Home
                 </Link>
@@ -281,7 +281,7 @@ export default function AboutPage() {
                 <Link
                   href="/solutions"
                   onClick={() => setMenuOpen(false)}
-                  className="rounded-xl px-4 py-3 text-sm text-neutral-600 transition hover:bg-neutral-100 hover:text-neutral-900"
+                  className="rounded-xl px-4 py-3 text-sm text-[#6F756F] transition hover:bg-[#F3EBD8] hover:text-[#3F4541]"
                 >
                   Solutions
                 </Link>
@@ -290,7 +290,7 @@ export default function AboutPage() {
                 <Link
                   href="/about"
                   onClick={() => setMenuOpen(false)}
-                  className="rounded-xl bg-neutral-100 px-4 py-3 text-sm font-medium text-neutral-900"
+                  className="rounded-xl bg-[#F3EBD8] px-4 py-3 text-sm font-medium text-[#3F4541]"
                 >
                   About Us
                 </Link>
@@ -299,7 +299,7 @@ export default function AboutPage() {
                 <Link
                   href="/about/board-of-directors"
                   onClick={() => setMenuOpen(false)}
-                  className="rounded-xl px-4 py-3 pl-8 text-sm text-neutral-500 transition hover:bg-neutral-100 hover:text-neutral-900"
+                  className="rounded-xl px-4 py-3 pl-8 text-sm text-[#6F756F] transition hover:bg-[#F3EBD8] hover:text-[#3F4541]"
                 >
                   Board of Directors
                 </Link>
@@ -308,7 +308,7 @@ export default function AboutPage() {
                 <Link
                   href="/about/awards"
                   onClick={() => setMenuOpen(false)}
-                  className="rounded-xl px-4 py-3 pl-8 text-sm text-neutral-500 transition hover:bg-neutral-100 hover:text-neutral-900"
+                  className="rounded-xl px-4 py-3 pl-8 text-sm text-[#6F756F] transition hover:bg-[#F3EBD8] hover:text-[#3F4541]"
                 >
                   Awards & Certification
                 </Link>
@@ -317,7 +317,7 @@ export default function AboutPage() {
                 <Link
                   href="/blog"
                   onClick={() => setMenuOpen(false)}
-                  className="rounded-xl px-4 py-3 text-sm text-neutral-600 transition hover:bg-neutral-100 hover:text-neutral-900"
+                  className="rounded-xl px-4 py-3 text-sm text-[#6F756F] transition hover:bg-[#F3EBD8] hover:text-[#3F4541]"
                 >
                   Blog
                 </Link>
@@ -326,7 +326,7 @@ export default function AboutPage() {
                 <Link
                   href="/contact"
                   onClick={() => setMenuOpen(false)}
-                  className="mt-2 rounded-xl bg-neutral-900 px-4 py-3 text-center text-sm font-semibold text-white transition hover:bg-neutral-700"
+                  className="mt-2 rounded-xl bg-[#E6A21A] px-4 py-3 text-center text-sm font-semibold text-white transition hover:bg-[#D49312]"
                 >
                   Get Started
                 </Link>
@@ -350,13 +350,14 @@ export default function AboutPage() {
             <source src="/Vidoes/solar-bg.mp4" type="video/mp4" />
           </video>
 
-          <div className="absolute inset-0 bg-black/35" />
+          {/* Soft Solar Overlay */}
+          <div className="absolute inset-0 bg-[#FBFAF5]/30" />
 
-          <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/35 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#FBFAF5]/80 via-[#FBFAF5]/40 to-transparent" />
 
-          <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-black/70 to-transparent" />
+          <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-[#FBFAF5]/70 to-transparent" />
 
-          <div className="absolute inset-x-0 bottom-0 h-48 bg-gradient-to-t from-black to-transparent" />
+          <div className="absolute inset-x-0 bottom-0 h-48 bg-gradient-to-t from-[#FBFAF5] via-[#FBFAF5]/30 to-transparent" />
         </div>
 
         <div className="relative z-10 mx-auto max-w-7xl">
@@ -366,24 +367,24 @@ export default function AboutPage() {
             transition={{ duration: 0.7 }}
             className="max-w-3xl"
           >
-            <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-white/30 bg-black/25 px-4 py-2 text-[11px] uppercase tracking-[0.2em] text-white backdrop-blur-md">
+            <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-[#E6A21A]/30 bg-[#FBFAF5]/75 px-4 py-2 text-[11px] uppercase tracking-[0.2em] text-[#4F8A70] shadow-sm backdrop-blur-md">
               <Leaf className="h-3 w-3" />
               About SolarNova
             </div>
 
-            <h1 className="text-4xl font-semibold leading-tight text-white sm:text-5xl lg:text-6xl">
+            <h1 className="text-4xl font-semibold leading-tight text-[#3F4541] sm:text-5xl lg:text-6xl">
               Powering a{" "}
-              <span className="text-white">cleaner tomorrow.</span>
+              <span className="text-[#E6A21A]">cleaner tomorrow.</span>
             </h1>
 
-            <p className="mt-5 max-w-2xl text-base leading-7 text-white/70 sm:text-lg">
+            <p className="mt-5 max-w-2xl text-base leading-7 text-[#4F514D] sm:text-lg">
               SolarNova creates practical solar solutions for homes,
               businesses and large-scale energy projects, combining clean
               energy with modern technology.
             </p>
           </motion.div>
 
-          <div className="mt-12 grid grid-cols-2 overflow-hidden rounded-2xl border border-white/15 bg-black/25 backdrop-blur-lg md:grid-cols-4">
+          <div className="mt-12 grid grid-cols-2 overflow-hidden rounded-2xl border border-[#E4DED0] bg-[#FBFAF5]/75 shadow-lg shadow-[#4F8A70]/10 backdrop-blur-lg md:grid-cols-4">
             {[
               "Clean Energy",
               "Smart Systems",
@@ -392,13 +393,13 @@ export default function AboutPage() {
             ].map((item, index) => (
               <div
                 key={item}
-                className="border-b border-white/10 px-5 py-5 last:border-0 md:border-b-0 md:border-r md:last:border-r-0"
+                className="border-b border-[#E4DED0] px-5 py-5 last:border-0 md:border-b-0 md:border-r md:last:border-r-0"
               >
-                <div className="text-[10px] tracking-[0.18em] text-white/60">
+                <div className="text-[10px] tracking-[0.18em] text-[#E6A21A]">
                   0{index + 1}
                 </div>
 
-                <div className="mt-2 text-sm font-medium text-white/90">
+                <div className="mt-2 text-sm font-medium text-[#3F4541]">
                   {item}
                 </div>
               </div>
@@ -408,19 +409,19 @@ export default function AboutPage() {
       </section>
 
       {/* ================= SOLAR SOLUTIONS ================= */}
-      <section className="bg-white px-6 py-14 lg:px-8 lg:py-20">
+      <section className="bg-[#FBFAF5] px-6 py-14 lg:px-8 lg:py-20">
         <div className="mx-auto max-w-7xl">
           <div className="mb-12 max-w-2xl">
-            <div className="mb-3 text-[11px] uppercase tracking-[0.22em] text-neutral-500">
+            <div className="mb-3 text-[11px] uppercase tracking-[0.22em] text-[#4F8A70]">
               What We Do
             </div>
 
-            <h2 className="text-3xl font-semibold text-neutral-900 sm:text-4xl">
+            <h2 className="text-3xl font-semibold text-[#3F4541] sm:text-4xl">
               Solar solutions built for{" "}
-              <span className="text-neutral-500">real needs.</span>
+              <span className="text-[#4F8A70]">real needs.</span>
             </h2>
 
-            <p className="mt-4 text-sm leading-7 text-neutral-500">
+            <p className="mt-4 text-sm leading-7 text-[#6F756F]">
               From residential rooftops to large solar farms, our solutions
               focus on clean energy, reliable performance and smart
               technology.
@@ -441,7 +442,7 @@ export default function AboutPage() {
                     : ""
                 }`}
               >
-                <div className="group relative h-[280px] overflow-hidden rounded-3xl border border-neutral-200 bg-neutral-100 sm:h-[340px]">
+                <div className="group relative h-[280px] overflow-hidden rounded-3xl border border-[#E4DED0] bg-[#F3EBD8] shadow-sm shadow-[#4F8A70]/10 sm:h-[340px]">
                   <Image
                     src={section.image}
                     alt={section.label}
@@ -451,35 +452,35 @@ export default function AboutPage() {
                     className="object-cover transition duration-700 group-hover:scale-105"
                   />
 
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-transparent to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#3F4541]/35 via-transparent to-transparent" />
 
-                  <div className="absolute bottom-4 left-4 rounded-full border border-white/15 bg-black/40 px-3 py-1.5 text-[10px] text-white/75 backdrop-blur-md">
+                  <div className="absolute bottom-4 left-4 rounded-full border border-white/40 bg-[#FBFAF5]/80 px-3 py-1.5 text-[10px] text-[#3F4541] shadow-sm backdrop-blur-md">
                     {section.number} / SolarNova
                   </div>
                 </div>
 
                 <div className="max-w-xl">
                   <div className="mb-3 flex items-center gap-3">
-                    <span className="text-xs tracking-[0.18em] text-neutral-500">
+                    <span className="text-xs tracking-[0.18em] text-[#E6A21A]">
                       {section.number}
                     </span>
 
-                    <span className="h-px w-8 bg-neutral-300" />
+                    <span className="h-px w-8 bg-[#E6A21A]/40" />
 
-                    <span className="text-[10px] uppercase tracking-[0.18em] text-neutral-400">
+                    <span className="text-[10px] uppercase tracking-[0.18em] text-[#8B908A]">
                       {section.label}
                     </span>
                   </div>
 
-                  <h3 className="text-2xl font-semibold leading-tight text-neutral-900 sm:text-3xl">
+                  <h3 className="text-2xl font-semibold leading-tight text-[#3F4541] sm:text-3xl">
                     {section.title}
                   </h3>
 
-                  <p className="mt-4 text-sm leading-7 text-neutral-500">
+                  <p className="mt-4 text-sm leading-7 text-[#6F756F]">
                     {section.description}
                   </p>
 
-                  <div className="mt-5 flex items-center gap-2 text-xs text-neutral-600">
+                  <div className="mt-5 flex items-center gap-2 text-xs text-[#4F8A70]">
                     <CheckCircle2 className="h-4 w-4" />
                     Designed for long-term performance
                   </div>
@@ -491,16 +492,16 @@ export default function AboutPage() {
       </section>
 
       {/* ================= VALUES ================= */}
-      <section className="border-y border-neutral-200 bg-neutral-50 px-6 py-16 lg:px-8">
+      <section className="border-y border-[#E4DED0] bg-[#F3EBD8] px-6 py-16 lg:px-8">
         <div className="mx-auto max-w-7xl">
           <div className="mb-9">
-            <div className="mb-3 text-[11px] uppercase tracking-[0.22em] text-neutral-500">
+            <div className="mb-3 text-[11px] uppercase tracking-[0.22em] text-[#4F8A70]">
               Our Values
             </div>
 
-            <h2 className="text-3xl font-semibold text-neutral-900 sm:text-4xl">
+            <h2 className="text-3xl font-semibold text-[#3F4541] sm:text-4xl">
               What guides{" "}
-              <span className="text-neutral-500">our work.</span>
+              <span className="text-[#4F8A70]">our work.</span>
             </h2>
           </div>
 
@@ -511,17 +512,17 @@ export default function AboutPage() {
               return (
                 <div
                   key={value.title}
-                  className="rounded-2xl border border-neutral-200 bg-white p-5"
+                  className="rounded-2xl border border-[#E4DED0] bg-[#FBFAF5] p-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#E6A21A]/40 hover:shadow-md hover:shadow-[#E6A21A]/10"
                 >
-                  <div className="mb-4 flex h-9 w-9 items-center justify-center rounded-xl bg-neutral-100 text-neutral-700">
+                  <div className="mb-4 flex h-9 w-9 items-center justify-center rounded-xl bg-[#E7F0EB] text-[#4F8A70]">
                     <Icon className="h-4 w-4" />
                   </div>
 
-                  <h3 className="text-sm font-semibold text-neutral-900">
+                  <h3 className="text-sm font-semibold text-[#3F4541]">
                     {value.title}
                   </h3>
 
-                  <p className="mt-2 text-xs leading-6 text-neutral-500">
+                  <p className="mt-2 text-xs leading-6 text-[#6F756F]">
                     {value.text}
                   </p>
                 </div>
@@ -532,62 +533,62 @@ export default function AboutPage() {
       </section>
 
       {/* ================= LEADERSHIP & AWARDS ================= */}
-      <section className="bg-white px-6 py-16 lg:px-8 lg:py-20">
+      <section className="bg-[#FBFAF5] px-6 py-16 lg:px-8 lg:py-20">
         <div className="mx-auto max-w-7xl">
           <div className="mb-9">
-            <div className="mb-3 text-[11px] uppercase tracking-[0.22em] text-neutral-500">
+            <div className="mb-3 text-[11px] uppercase tracking-[0.22em] text-[#4F8A70]">
               SolarNova
             </div>
 
-            <h2 className="text-3xl font-semibold text-neutral-900 sm:text-4xl">
-              People & <span className="text-neutral-500">progress.</span>
+            <h2 className="text-3xl font-semibold text-[#3F4541] sm:text-4xl">
+              People & <span className="text-[#E6A21A]">progress.</span>
             </h2>
           </div>
 
           <div className="grid gap-4 md:grid-cols-2">
             <Link
               href="/about/board-of-directors"
-              className="group rounded-2xl border border-neutral-200 bg-neutral-50 p-6 transition hover:border-neutral-400 hover:bg-neutral-100"
+              className="group rounded-2xl border border-[#E4DED0] bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#4F8A70]/40 hover:bg-[#F8FAF7] hover:shadow-md hover:shadow-[#4F8A70]/10"
             >
-              <div className="mb-5 flex h-10 w-10 items-center justify-center rounded-xl bg-neutral-100 text-neutral-700">
+              <div className="mb-5 flex h-10 w-10 items-center justify-center rounded-xl bg-[#E7F0EB] text-[#4F8A70]">
                 <Users className="h-4 w-4" />
               </div>
 
               <div className="flex items-center justify-between">
                 <div>
-                  <div className="text-[10px] uppercase tracking-[0.18em] text-neutral-400">
+                  <div className="text-[10px] uppercase tracking-[0.18em] text-[#8B908A]">
                     Leadership
                   </div>
 
-                  <h3 className="mt-2 text-xl font-semibold text-neutral-900">
+                  <h3 className="mt-2 text-xl font-semibold text-[#3F4541]">
                     Board of Directors
                   </h3>
                 </div>
 
-                <ArrowRight className="h-5 w-5 text-neutral-700 transition group-hover:translate-x-1" />
+                <ArrowRight className="h-5 w-5 text-[#4F8A70] transition group-hover:translate-x-1" />
               </div>
             </Link>
 
             <Link
               href="/about/awards"
-              className="group rounded-2xl border border-neutral-200 bg-neutral-50 p-6 transition hover:border-neutral-400 hover:bg-neutral-100"
+              className="group rounded-2xl border border-[#E4DED0] bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#E6A21A]/40 hover:bg-[#FFFDF7] hover:shadow-md hover:shadow-[#E6A21A]/10"
             >
-              <div className="mb-5 flex h-10 w-10 items-center justify-center rounded-xl bg-neutral-100 text-neutral-700">
+              <div className="mb-5 flex h-10 w-10 items-center justify-center rounded-xl bg-[#F6C85F]/20 text-[#E6A21A]">
                 <Award className="h-4 w-4" />
               </div>
 
               <div className="flex items-center justify-between">
                 <div>
-                  <div className="text-[10px] uppercase tracking-[0.18em] text-neutral-400">
+                  <div className="text-[10px] uppercase tracking-[0.18em] text-[#8B908A]">
                     Recognition
                   </div>
 
-                  <h3 className="mt-2 text-xl font-semibold text-neutral-900">
+                  <h3 className="mt-2 text-xl font-semibold text-[#3F4541]">
                     Awards & Certification
                   </h3>
                 </div>
 
-                <ArrowRight className="h-5 w-5 text-neutral-700 transition group-hover:translate-x-1" />
+                <ArrowRight className="h-5 w-5 text-[#E6A21A] transition group-hover:translate-x-1" />
               </div>
             </Link>
           </div>
@@ -595,23 +596,25 @@ export default function AboutPage() {
       </section>
 
       {/* ================= CTA ================= */}
-      <section className="bg-white px-6 pb-16 lg:px-8 lg:pb-20">
+      <section className="bg-[#FBFAF5] px-6 pb-16 lg:px-8 lg:pb-20">
         <div className="mx-auto max-w-7xl">
-          <div className="rounded-3xl border border-neutral-200 bg-neutral-100 px-6 py-12 text-center sm:px-10">
-            <Sun className="mx-auto mb-4 h-7 w-7 text-neutral-700" />
+          <div className="relative overflow-hidden rounded-3xl border border-[#E4DED0] bg-[#F3EBD8] px-6 py-12 text-center shadow-sm sm:px-10">
+            <div className="pointer-events-none absolute left-1/2 top-0 h-40 w-40 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#F6C85F]/30 blur-3xl" />
 
-            <h2 className="text-3xl font-semibold text-neutral-900 sm:text-4xl">
+            <Sun className="relative mx-auto mb-4 h-7 w-7 text-[#E6A21A]" />
+
+            <h2 className="relative text-3xl font-semibold text-[#3F4541] sm:text-4xl">
               Ready for a cleaner energy future?
             </h2>
 
-            <p className="mx-auto mt-4 max-w-xl text-sm leading-7 text-neutral-500">
+            <p className="relative mx-auto mt-4 max-w-xl text-sm leading-7 text-[#6F756F]">
               Let&apos;s explore the right solar solution for your energy
               needs.
             </p>
 
             <Link
               href="/contact"
-              className="mt-7 inline-flex items-center gap-2 rounded-full border border-neutral-800 bg-neutral-900 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-neutral-300/30 transition-all duration-300 hover:bg-neutral-700"
+              className="relative mt-7 inline-flex items-center gap-2 rounded-full border border-[#E6A21A] bg-[#E6A21A] px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-[#E6A21A]/20 transition-all duration-300 hover:bg-[#D49312] hover:shadow-[#E6A21A]/30"
             >
               Get Started
               <ArrowRight className="h-4 w-4" />
@@ -621,28 +624,28 @@ export default function AboutPage() {
       </section>
 
       {/* ================= FOOTER ================= */}
-      <footer className="border-t border-neutral-200 bg-neutral-950 px-6 py-10 text-white lg:px-8">
+      <footer className="border-t border-[#E4DED0] bg-[#FBFAF5] px-6 py-10 text-[#3F4541] lg:px-8">
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-10 md:grid-cols-3">
             {/* Brand */}
             <div>
               <Link href="/" className="inline-flex items-center gap-2">
-                <div className="flex h-9 w-9 items-center justify-center rounded-full border border-neutral-700 bg-neutral-800">
-                  <Sun className="h-4 w-4 text-white" />
+                <div className="flex h-9 w-9 items-center justify-center rounded-full border border-[#E6A21A]/35 bg-[#F6C85F]/20">
+                  <Sun className="h-4 w-4 text-[#E6A21A]" />
                 </div>
 
                 <div>
-                  <div className="text-sm font-semibold">
-                    Solar<span className="text-neutral-400">Nova</span>
+                  <div className="text-sm font-semibold text-[#3F4541]">
+                    Solar<span className="text-[#E6A21A]">Nova</span>
                   </div>
 
-                  <div className="text-[8px] uppercase tracking-[0.2em] text-white/30">
+                  <div className="text-[8px] uppercase tracking-[0.2em] text-[#8B908A]">
                     Clean Energy
                   </div>
                 </div>
               </Link>
 
-              <p className="mt-4 max-w-xs text-xs leading-6 text-white/35">
+              <p className="mt-4 max-w-xs text-xs leading-6 text-[#6F756F]">
                 Practical solar solutions for homes, businesses and
                 large-scale energy projects.
               </p>
@@ -650,42 +653,42 @@ export default function AboutPage() {
 
             {/* Explore */}
             <div>
-              <div className="mb-4 text-[10px] uppercase tracking-[0.2em] text-neutral-400">
+              <div className="mb-4 text-[10px] uppercase tracking-[0.2em] text-[#4F8A70]">
                 Explore
               </div>
 
               <div className="grid grid-cols-2 gap-x-8 gap-y-3">
                 <Link
                   href="/"
-                  className="text-xs text-white/50 transition hover:text-white"
+                  className="text-xs text-[#6F756F] transition hover:text-[#E6A21A]"
                 >
                   Home
                 </Link>
 
                 <Link
                   href="/solutions"
-                  className="text-xs text-white/50 transition hover:text-white"
+                  className="text-xs text-[#6F756F] transition hover:text-[#E6A21A]"
                 >
                   Solutions
                 </Link>
 
                 <Link
                   href="/about"
-                  className="text-xs text-white/50 transition hover:text-white"
+                  className="text-xs text-[#6F756F] transition hover:text-[#E6A21A]"
                 >
                   About
                 </Link>
 
                 <Link
                   href="/blog"
-                  className="text-xs text-white/50 transition hover:text-white"
+                  className="text-xs text-[#6F756F] transition hover:text-[#E6A21A]"
                 >
                   Blog
                 </Link>
 
                 <Link
                   href="/contact"
-                  className="text-xs text-white/50 transition hover:text-white"
+                  className="text-xs text-[#6F756F] transition hover:text-[#E6A21A]"
                 >
                   Contact
                 </Link>
@@ -694,28 +697,28 @@ export default function AboutPage() {
 
             {/* Company */}
             <div>
-              <div className="mb-4 text-[10px] uppercase tracking-[0.2em] text-neutral-400">
+              <div className="mb-4 text-[10px] uppercase tracking-[0.2em] text-[#4F8A70]">
                 Company
               </div>
 
               <div className="flex flex-col gap-3">
                 <Link
                   href="/about/board-of-directors"
-                  className="text-xs text-white/50 transition hover:text-white"
+                  className="text-xs text-[#6F756F] transition hover:text-[#4F8A70]"
                 >
                   Board of Directors
                 </Link>
 
                 <Link
                   href="/about/awards"
-                  className="text-xs text-white/50 transition hover:text-white"
+                  className="text-xs text-[#6F756F] transition hover:text-[#E6A21A]"
                 >
                   Awards & Certification
                 </Link>
 
                 <Link
                   href="/about"
-                  className="text-xs text-white/50 transition hover:text-white"
+                  className="text-xs text-[#6F756F] transition hover:text-[#4F8A70]"
                 >
                   About SolarNova
                 </Link>
@@ -723,8 +726,8 @@ export default function AboutPage() {
             </div>
           </div>
 
-          <div className="mt-10 flex flex-col justify-between gap-3 border-t border-white/10 pt-6 md:flex-row md:items-center">
-            <div className="text-[11px] text-white/25">
+          <div className="mt-10 flex flex-col justify-between gap-3 border-t border-[#E4DED0] pt-6 md:flex-row md:items-center">
+            <div className="text-[11px] text-[#8B908A]">
               © {new Date().getFullYear()} SolarNova. Clean energy for a
               brighter tomorrow.
             </div>
@@ -732,35 +735,35 @@ export default function AboutPage() {
             <div className="flex flex-wrap gap-5">
               <Link
                 href="/"
-                className="text-[11px] text-white/30 transition hover:text-white"
+                className="text-[11px] text-[#8B908A] transition hover:text-[#E6A21A]"
               >
                 Home
               </Link>
 
               <Link
                 href="/solutions"
-                className="text-[11px] text-white/30 transition hover:text-white"
+                className="text-[11px] text-[#8B908A] transition hover:text-[#E6A21A]"
               >
                 Solutions
               </Link>
 
               <Link
                 href="/about"
-                className="text-[11px] text-white/30 transition hover:text-white"
+                className="text-[11px] text-[#8B908A] transition hover:text-[#E6A21A]"
               >
                 About
               </Link>
 
               <Link
                 href="/blog"
-                className="text-[11px] text-white/30 transition hover:text-white"
+                className="text-[11px] text-[#8B908A] transition hover:text-[#E6A21A]"
               >
                 Blog
               </Link>
 
               <Link
                 href="/contact"
-                className="text-[11px] text-white/30 transition hover:text-white"
+                className="text-[11px] text-[#8B908A] transition hover:text-[#E6A21A]"
               >
                 Contact
               </Link>
