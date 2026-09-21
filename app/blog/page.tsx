@@ -68,22 +68,22 @@ export default function BlogPage() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <main className="min-h-screen bg-[#03120e] text-white">
+    <main className="min-h-screen bg-white text-neutral-900">
       {/* ================= NAVBAR ================= */}
       <header className="fixed left-0 right-0 top-0 z-50 px-4 pt-4 sm:px-6 lg:px-8">
-        <nav className="mx-auto flex max-w-7xl items-center justify-between rounded-full border border-white/10 bg-[#061812]/85 px-5 py-3 backdrop-blur-xl">
+        <nav className="mx-auto flex max-w-7xl items-center justify-between rounded-full border border-neutral-200 bg-white/90 px-5 py-3 backdrop-blur-xl">
           {/* Logo */}
           <Link
             href="/"
             onClick={() => setMobileMenuOpen(false)}
             className="flex items-center gap-2"
           >
-            <div className="flex h-9 w-9 items-center justify-center rounded-full bg-[#b9ff68]">
-              <Sun className="h-5 w-5 text-[#092016]" />
+            <div className="flex h-9 w-9 items-center justify-center rounded-full bg-neutral-900">
+              <Sun className="h-5 w-5 text-white" />
             </div>
 
             <span className="text-lg font-semibold tracking-tight">
-              Solar<span className="text-[#b9ff68]">Nova</span>
+              Solar<span className="text-neutral-500">Nova</span>
             </span>
           </Link>
 
@@ -91,25 +91,25 @@ export default function BlogPage() {
           <div className="hidden items-center gap-8 md:flex">
             <Link
               href="/solutions"
-              className="text-sm text-white/70 transition hover:text-white"
+              className="text-sm text-neutral-600 transition hover:text-neutral-950"
             >
               Solutions
             </Link>
 
             <Link
               href="/about"
-              className="text-sm text-white/70 transition hover:text-white"
+              className="text-sm text-neutral-600 transition hover:text-neutral-950"
             >
               About
             </Link>
 
-            <Link href="/blog" className="text-sm text-[#b9ff68]">
+            <Link href="/blog" className="text-sm text-neutral-950">
               Blog
             </Link>
 
             <Link
               href="/contact"
-              className="rounded-full bg-[#b9ff68] px-5 py-2.5 text-sm font-semibold text-[#092016] transition hover:bg-white"
+              className="rounded-full bg-neutral-900 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-neutral-700"
             >
               Get Started
             </Link>
@@ -120,7 +120,7 @@ export default function BlogPage() {
             type="button"
             aria-label="Toggle menu"
             onClick={() => setMobileMenuOpen((prev) => !prev)}
-            className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/5 md:hidden"
+            className="flex h-10 w-10 items-center justify-center rounded-full border border-neutral-200 bg-neutral-100 md:hidden"
           >
             {mobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
           </button>
@@ -131,13 +131,13 @@ export default function BlogPage() {
           <motion.div
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
-            className="mx-auto mt-2 max-w-7xl rounded-3xl border border-white/10 bg-[#061812]/95 p-4 backdrop-blur-xl md:hidden"
+            className="mx-auto mt-2 max-w-7xl rounded-3xl border border-neutral-200 bg-white/95 p-4 backdrop-blur-xl md:hidden"
           >
             <div className="flex flex-col gap-2">
               <Link
                 href="/solutions"
                 onClick={() => setMobileMenuOpen(false)}
-                className="rounded-2xl px-4 py-3 text-sm text-white/70 hover:bg-white/5"
+                className="rounded-2xl px-4 py-3 text-sm text-neutral-600 hover:bg-neutral-100"
               >
                 Solutions
               </Link>
@@ -145,7 +145,7 @@ export default function BlogPage() {
               <Link
                 href="/about"
                 onClick={() => setMobileMenuOpen(false)}
-                className="rounded-2xl px-4 py-3 text-sm text-white/70 hover:bg-white/5"
+                className="rounded-2xl px-4 py-3 text-sm text-neutral-600 hover:bg-neutral-100"
               >
                 About
               </Link>
@@ -153,7 +153,7 @@ export default function BlogPage() {
               <Link
                 href="/blog"
                 onClick={() => setMobileMenuOpen(false)}
-                className="rounded-2xl bg-[#b9ff68]/10 px-4 py-3 text-sm text-[#b9ff68]"
+                className="rounded-2xl bg-neutral-100 px-4 py-3 text-sm text-neutral-950"
               >
                 Blog
               </Link>
@@ -161,7 +161,7 @@ export default function BlogPage() {
               <Link
                 href="/contact"
                 onClick={() => setMobileMenuOpen(false)}
-                className="mt-2 rounded-full bg-[#b9ff68] px-5 py-3 text-center text-sm font-semibold text-[#092016]"
+                className="mt-2 rounded-full bg-neutral-900 px-5 py-3 text-center text-sm font-semibold text-white"
               >
                 Get Started
               </Link>
@@ -171,7 +171,7 @@ export default function BlogPage() {
       </header>
 
       {/* ================= HERO / HEADER ================= */}
-      <section className="relative min-h-[650px] overflow-hidden pt-40">
+      <section className="relative min-h-[650px] overflow-hidden bg-neutral-950 pt-40">
         {/* Background Video */}
         <video
           autoPlay
@@ -185,11 +185,11 @@ export default function BlogPage() {
         </video>
 
         {/* Video Overlay */}
-        <div className="absolute inset-0 bg-[#03120e]/75" />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#03120e]/70 via-[#03120e]/60 to-[#03120e]" />
+        <div className="absolute inset-0 bg-black/65" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black" />
 
-        {/* Green Glow */}
-        <div className="absolute left-1/2 top-20 h-80 w-80 -translate-x-1/2 rounded-full bg-[#b9ff68]/10 blur-[120px]" />
+        {/* Neutral Glow */}
+        <div className="absolute left-1/2 top-20 h-80 w-80 -translate-x-1/2 rounded-full bg-white/10 blur-[120px]" />
 
         <div className="relative z-10 mx-auto max-w-7xl px-5 pb-24 sm:px-8 lg:px-10">
           <motion.div
@@ -199,16 +199,16 @@ export default function BlogPage() {
             className="max-w-4xl"
           >
             <div className="mb-6 flex items-center gap-3">
-              <span className="h-px w-10 bg-[#b9ff68]" />
+              <span className="h-px w-10 bg-white" />
 
-              <span className="text-xs font-semibold uppercase tracking-[0.28em] text-[#b9ff68]">
+              <span className="text-xs font-semibold uppercase tracking-[0.28em] text-white">
                 SolarNova Journal
               </span>
             </div>
 
-            <h1 className="text-5xl font-medium leading-[0.95] tracking-[-0.04em] sm:text-6xl lg:text-8xl">
+            <h1 className="text-5xl font-medium leading-[0.95] tracking-[-0.04em] text-white sm:text-6xl lg:text-8xl">
               Ideas for a
-              <span className="block text-[#b9ff68]">
+              <span className="block text-white">
                 cleaner tomorrow.
               </span>
             </h1>
@@ -222,11 +222,11 @@ export default function BlogPage() {
       </section>
 
       {/* ================= BLOG GRID ================= */}
-      <section className="px-5 pb-28 sm:px-8 lg:px-10">
+      <section className="bg-white px-5 pb-28 sm:px-8 lg:px-10">
         <div className="mx-auto max-w-7xl">
           <div className="mb-10 flex items-end justify-between">
             <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.25em] text-[#b9ff68]">
+              <p className="text-xs font-semibold uppercase tracking-[0.25em] text-neutral-500">
                 Latest insights
               </p>
 
@@ -235,7 +235,7 @@ export default function BlogPage() {
               </h2>
             </div>
 
-            <span className="hidden text-sm text-white/30 sm:block">
+            <span className="hidden text-sm text-neutral-400 sm:block">
               06 Stories
             </span>
           </div>
@@ -251,7 +251,7 @@ export default function BlogPage() {
                   duration: 0.5,
                   delay: index * 0.05,
                 }}
-                className="group overflow-hidden rounded-[28px] border border-white/10 bg-[#071b15]"
+                className="group overflow-hidden rounded-[28px] border border-neutral-200 bg-neutral-100"
               >
                 {/* Image */}
                 <div className="relative h-[260px] overflow-hidden">
@@ -263,10 +263,10 @@ export default function BlogPage() {
                     className="object-cover transition duration-700 group-hover:scale-105"
                   />
 
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#03120e]/70 via-transparent to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
 
                   <div className="absolute left-5 top-5">
-                    <span className="rounded-full border border-white/15 bg-[#03120e]/50 px-3 py-1.5 text-[10px] font-semibold tracking-[0.15em] text-[#b9ff68] backdrop-blur-md">
+                    <span className="rounded-full border border-white/20 bg-black/40 px-3 py-1.5 text-[10px] font-semibold tracking-[0.15em] text-white backdrop-blur-md">
                       {blog.category}
                     </span>
                   </div>
@@ -274,22 +274,22 @@ export default function BlogPage() {
 
                 {/* Content */}
                 <div className="p-6">
-                  <p className="text-xs text-white/35">{blog.date}</p>
+                  <p className="text-xs text-neutral-400">{blog.date}</p>
 
-                  <h3 className="mt-4 text-2xl font-medium leading-tight tracking-tight transition group-hover:text-[#b9ff68]">
+                  <h3 className="mt-4 text-2xl font-medium leading-tight tracking-tight transition group-hover:text-neutral-600">
                     {blog.title}
                   </h3>
 
-                  <p className="mt-4 text-sm leading-6 text-white/50">
+                  <p className="mt-4 text-sm leading-6 text-neutral-500">
                     {blog.description}
                   </p>
 
                   <div className="mt-7 flex items-center justify-between">
-                    <span className="text-sm font-medium text-white/65 transition group-hover:text-[#b9ff68]">
+                    <span className="text-sm font-medium text-neutral-600 transition group-hover:text-neutral-950">
                       Read article
                     </span>
 
-                    <div className="flex h-9 w-9 items-center justify-center rounded-full border border-white/10 transition group-hover:border-[#b9ff68]/40 group-hover:bg-[#b9ff68] group-hover:text-[#092016]">
+                    <div className="flex h-9 w-9 items-center justify-center rounded-full border border-neutral-200 transition group-hover:border-neutral-400 group-hover:bg-neutral-900 group-hover:text-white">
                       <ArrowUpRight size={16} />
                     </div>
                   </div>
@@ -301,10 +301,10 @@ export default function BlogPage() {
       </section>
 
       {/* ================= FEATURED BLOG ================= */}
-      <section className="px-5 pb-28 sm:px-8 lg:px-10">
+      <section className="bg-white px-5 pb-28 sm:px-8 lg:px-10">
         <div className="mx-auto max-w-7xl">
           <div className="mb-10">
-            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-[#b9ff68]">
+            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-neutral-500">
               Featured
             </p>
 
@@ -317,7 +317,7 @@ export default function BlogPage() {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="group relative min-h-[560px] overflow-hidden rounded-[32px] border border-white/10"
+            className="group relative min-h-[560px] overflow-hidden rounded-[32px] border border-neutral-200"
           >
             <Image
               src="/about/large solar landscape.jpg"
@@ -327,13 +327,13 @@ export default function BlogPage() {
               className="object-cover transition duration-1000 group-hover:scale-105"
             />
 
-            <div className="absolute inset-0 bg-gradient-to-t from-[#03120e] via-[#03120e]/55 to-transparent" />
-            <div className="absolute inset-0 bg-gradient-to-r from-[#03120e]/70 via-transparent to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black via-black/55 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-transparent to-transparent" />
 
             <div className="absolute inset-x-0 bottom-0 p-7 sm:p-10 lg:p-14">
               <div className="max-w-3xl">
                 <div className="flex flex-wrap items-center gap-3">
-                  <span className="rounded-full bg-[#b9ff68] px-3 py-1.5 text-[10px] font-bold tracking-[0.15em] text-[#092016]">
+                  <span className="rounded-full bg-white px-3 py-1.5 text-[10px] font-bold tracking-[0.15em] text-neutral-900">
                     FEATURED
                   </span>
 
@@ -342,9 +342,9 @@ export default function BlogPage() {
                   </span>
                 </div>
 
-                <h3 className="mt-5 text-4xl font-medium leading-tight tracking-tight sm:text-5xl lg:text-6xl">
+                <h3 className="mt-5 text-4xl font-medium leading-tight tracking-tight text-white sm:text-5xl lg:text-6xl">
                   The future of energy is
-                  <span className="text-[#b9ff68]">
+                  <span className="text-white">
                     {" "}
                     cleaner, smarter and more connected.
                   </span>
@@ -359,7 +359,7 @@ export default function BlogPage() {
 
                 <button
                   type="button"
-                  className="mt-8 inline-flex items-center gap-3 rounded-full bg-[#b9ff68] px-6 py-3.5 text-sm font-semibold text-[#092016] transition hover:bg-white"
+                  className="mt-8 inline-flex items-center gap-3 rounded-full bg-white px-6 py-3.5 text-sm font-semibold text-neutral-900 transition hover:bg-neutral-200"
                 >
                   Read featured story
                   <ArrowRight size={17} />
@@ -371,23 +371,23 @@ export default function BlogPage() {
       </section>
 
       {/* ================= NEWSLETTER / CTA ================= */}
-      <section className="px-5 pb-24 sm:px-8 lg:px-10">
-        <div className="mx-auto max-w-7xl overflow-hidden rounded-[32px] border border-[#b9ff68]/15 bg-[#081f17]">
+      <section className="bg-white px-5 pb-24 sm:px-8 lg:px-10">
+        <div className="mx-auto max-w-7xl overflow-hidden rounded-[32px] border border-neutral-200 bg-neutral-100">
           <div className="grid gap-10 p-8 sm:p-12 lg:grid-cols-[1fr_auto] lg:items-center lg:p-16">
             <div className="max-w-2xl">
-              <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-[#b9ff68] text-[#092016]">
+              <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-neutral-900 text-white">
                 <Leaf size={23} />
               </div>
 
               <h2 className="text-3xl font-medium tracking-tight sm:text-4xl">
                 Building a cleaner future,
-                <span className="text-[#b9ff68]">
+                <span className="text-neutral-500">
                   {" "}
                   together.
                 </span>
               </h2>
 
-              <p className="mt-5 text-sm leading-7 text-white/50 sm:text-base">
+              <p className="mt-5 text-sm leading-7 text-neutral-500 sm:text-base">
                 Discover more about SolarNova, our renewable energy
                 solutions and our vision for a sustainable tomorrow.
               </p>
@@ -395,7 +395,7 @@ export default function BlogPage() {
 
             <Link
               href="/solutions"
-              className="inline-flex items-center justify-center gap-3 rounded-full bg-[#b9ff68] px-7 py-4 text-sm font-semibold text-[#092016] transition hover:bg-white"
+              className="inline-flex items-center justify-center gap-3 rounded-full bg-neutral-900 px-7 py-4 text-sm font-semibold text-white transition hover:bg-neutral-700"
             >
               Explore Solutions
               <ArrowRight size={17} />
@@ -405,18 +405,18 @@ export default function BlogPage() {
       </section>
 
       {/* ================= FOOTER ================= */}
-      <footer className="border-t border-white/10 bg-[#020d0a]">
+      <footer className="border-t border-neutral-800 bg-neutral-950">
         <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8 lg:px-10">
           <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-[1.4fr_0.7fr_0.7fr_0.9fr]">
             {/* Brand */}
             <div>
               <Link href="/" className="flex items-center gap-2">
-                <div className="flex h-9 w-9 items-center justify-center rounded-full bg-[#b9ff68]">
-                  <Sun className="h-5 w-5 text-[#092016]" />
+                <div className="flex h-9 w-9 items-center justify-center rounded-full bg-white">
+                  <Sun className="h-5 w-5 text-neutral-900" />
                 </div>
 
-                <span className="text-lg font-semibold">
-                  Solar<span className="text-[#b9ff68]">Nova</span>
+                <span className="text-lg font-semibold text-white">
+                  Solar<span className="text-neutral-400">Nova</span>
                 </span>
               </Link>
 
@@ -435,21 +435,21 @@ export default function BlogPage() {
               <div className="mt-5 flex flex-col gap-3">
                 <Link
                   href="/solutions"
-                  className="text-sm text-white/40 transition hover:text-[#b9ff68]"
+                  className="text-sm text-white/40 transition hover:text-white"
                 >
                   Solutions
                 </Link>
 
                 <Link
                   href="/about"
-                  className="text-sm text-white/40 transition hover:text-[#b9ff68]"
+                  className="text-sm text-white/40 transition hover:text-white"
                 >
                   About
                 </Link>
 
                 <Link
                   href="/blog"
-                  className="text-sm text-white/40 transition hover:text-[#b9ff68]"
+                  className="text-sm text-white/40 transition hover:text-white"
                 >
                   Blog
                 </Link>
@@ -465,21 +465,21 @@ export default function BlogPage() {
               <div className="mt-5 flex flex-col gap-3">
                 <Link
                   href="/about/board-of-directors"
-                  className="text-sm text-white/40 transition hover:text-[#b9ff68]"
+                  className="text-sm text-white/40 transition hover:text-white"
                 >
                   Leadership
                 </Link>
 
                 <Link
                   href="/about/awards"
-                  className="text-sm text-white/40 transition hover:text-[#b9ff68]"
+                  className="text-sm text-white/40 transition hover:text-white"
                 >
                   Awards
                 </Link>
 
                 <Link
                   href="/contact"
-                  className="text-sm text-white/40 transition hover:text-[#b9ff68]"
+                  className="text-sm text-white/40 transition hover:text-white"
                 >
                   Contact
                 </Link>
@@ -498,7 +498,7 @@ export default function BlogPage() {
 
                 <Link
                   href="/contact"
-                  className="inline-flex items-center gap-2 text-[#b9ff68]"
+                  className="inline-flex items-center gap-2 text-white"
                 >
                   Start a conversation
                   <ArrowUpRight size={14} />

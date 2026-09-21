@@ -204,9 +204,9 @@ export default function SolutionsPage() {
   };
 
   return (
-    <main className="min-h-screen bg-[#03120e] text-white">
+    <main className="min-h-screen bg-white text-neutral-900">
       {/* NAVBAR */}
-      <header className="fixed left-0 right-0 top-0 z-50 border-b border-white/10 bg-[#061812]/95 backdrop-blur-xl">
+      <header className="fixed left-0 right-0 top-0 z-50 border-b border-neutral-200 bg-white/95 backdrop-blur-xl">
         <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6 lg:px-8">
           {/* Logo */}
           <Link
@@ -214,15 +214,15 @@ export default function SolutionsPage() {
             className="flex items-center gap-3"
             onClick={() => setMobileMenuOpen(false)}
           >
-            <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#b9ff68]">
-              <Sun className="h-5 w-5 text-[#092016]" />
+            <div className="flex h-10 w-10 items-center justify-center rounded-full bg-neutral-900">
+              <Sun className="h-5 w-5 text-white" />
             </div>
 
             <div>
               <div className="text-lg font-semibold tracking-tight">
                 Solar Nova
               </div>
-              <div className="text-[10px] uppercase tracking-[0.28em] text-white/50">
+              <div className="text-[10px] uppercase tracking-[0.28em] text-neutral-400">
                 Renewable Energy
               </div>
             </div>
@@ -232,14 +232,14 @@ export default function SolutionsPage() {
           <nav className="hidden items-center gap-8 lg:flex">
             <Link
               href="/"
-              className="text-sm text-white/70 transition hover:text-[#b9ff68]"
+              className="text-sm text-neutral-600 transition hover:text-neutral-950"
             >
               Home
             </Link>
 
             <Link
               href="/solutions"
-              className="text-sm font-medium text-[#b9ff68]"
+              className="text-sm font-medium text-neutral-950"
             >
               Solutions
             </Link>
@@ -247,30 +247,30 @@ export default function SolutionsPage() {
             <div className="group relative">
               <Link
                 href="/about"
-                className="flex items-center gap-1 text-sm text-white/70 transition hover:text-[#b9ff68]"
+                className="flex items-center gap-1 text-sm text-neutral-600 transition hover:text-neutral-950"
               >
                 About
                 <ChevronDown className="h-4 w-4" />
               </Link>
 
-              <div className="invisible absolute left-0 top-full mt-4 w-52 translate-y-2 rounded-2xl border border-white/10 bg-[#071b15] p-2 opacity-0 shadow-2xl transition-all duration-200 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100">
+              <div className="invisible absolute left-0 top-full mt-4 w-52 translate-y-2 rounded-2xl border border-neutral-200 bg-white p-2 opacity-0 shadow-2xl transition-all duration-200 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100">
                 <Link
                   href="/about"
-                  className="block rounded-xl px-4 py-3 text-sm text-white/70 transition hover:bg-white/5 hover:text-[#b9ff68]"
+                  className="block rounded-xl px-4 py-3 text-sm text-neutral-600 transition hover:bg-neutral-100 hover:text-neutral-950"
                 >
                   About Us
                 </Link>
 
                 <Link
                   href="/about/board-of-directors"
-                  className="block rounded-xl px-4 py-3 text-sm text-white/70 transition hover:bg-white/5 hover:text-[#b9ff68]"
+                  className="block rounded-xl px-4 py-3 text-sm text-neutral-600 transition hover:bg-neutral-100 hover:text-neutral-950"
                 >
                   Board of Directors
                 </Link>
 
                 <Link
                   href="/about/awards"
-                  className="block rounded-xl px-4 py-3 text-sm text-white/70 transition hover:bg-white/5 hover:text-[#b9ff68]"
+                  className="block rounded-xl px-4 py-3 text-sm text-neutral-600 transition hover:bg-neutral-100 hover:text-neutral-950"
                 >
                   Awards
                 </Link>
@@ -279,14 +279,14 @@ export default function SolutionsPage() {
 
             <Link
               href="/blog"
-              className="text-sm text-white/70 transition hover:text-[#b9ff68]"
+              className="text-sm text-neutral-600 transition hover:text-neutral-950"
             >
               Blog
             </Link>
 
             <Link
               href="/contact"
-              className="rounded-full bg-[#b9ff68] px-5 py-2.5 text-sm font-semibold text-[#092016] transition hover:bg-[#5dff85]"
+              className="rounded-full bg-neutral-900 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-neutral-700"
             >
               Contact
             </Link>
@@ -296,7 +296,7 @@ export default function SolutionsPage() {
           <button
             type="button"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/5 lg:hidden"
+            className="flex h-10 w-10 items-center justify-center rounded-full border border-neutral-200 bg-neutral-100 lg:hidden"
             aria-label="Toggle navigation menu"
             aria-expanded={mobileMenuOpen}
           >
@@ -310,12 +310,12 @@ export default function SolutionsPage() {
 
         {/* Mobile Navigation */}
         {mobileMenuOpen && (
-          <div className="border-t border-white/10 bg-[#061812] px-6 py-5 lg:hidden">
+          <div className="border-t border-neutral-200 bg-white px-6 py-5 lg:hidden">
             <nav className="flex flex-col gap-2">
               <Link
                 href="/"
                 onClick={() => setMobileMenuOpen(false)}
-                className="rounded-xl px-4 py-3 text-white/75 transition hover:bg-white/5 hover:text-[#b9ff68]"
+                className="rounded-xl px-4 py-3 text-neutral-600 transition hover:bg-neutral-100 hover:text-neutral-950"
               >
                 Home
               </Link>
@@ -323,7 +323,7 @@ export default function SolutionsPage() {
               <Link
                 href="/solutions"
                 onClick={() => setMobileMenuOpen(false)}
-                className="rounded-xl bg-white/5 px-4 py-3 text-[#b9ff68]"
+                className="rounded-xl bg-neutral-100 px-4 py-3 text-neutral-950"
               >
                 Solutions
               </Link>
@@ -331,7 +331,7 @@ export default function SolutionsPage() {
               <Link
                 href="/about"
                 onClick={() => setMobileMenuOpen(false)}
-                className="rounded-xl px-4 py-3 text-white/75 transition hover:bg-white/5 hover:text-[#b9ff68]"
+                className="rounded-xl px-4 py-3 text-neutral-600 transition hover:bg-neutral-100 hover:text-neutral-950"
               >
                 About
               </Link>
@@ -339,7 +339,7 @@ export default function SolutionsPage() {
               <Link
                 href="/about/board-of-directors"
                 onClick={() => setMobileMenuOpen(false)}
-                className="rounded-xl px-4 py-3 pl-8 text-sm text-white/60 transition hover:bg-white/5 hover:text-[#b9ff68]"
+                className="rounded-xl px-4 py-3 pl-8 text-sm text-neutral-500 transition hover:bg-neutral-100 hover:text-neutral-950"
               >
                 Board of Directors
               </Link>
@@ -347,7 +347,7 @@ export default function SolutionsPage() {
               <Link
                 href="/about/awards"
                 onClick={() => setMobileMenuOpen(false)}
-                className="rounded-xl px-4 py-3 pl-8 text-sm text-white/60 transition hover:bg-white/5 hover:text-[#b9ff68]"
+                className="rounded-xl px-4 py-3 pl-8 text-sm text-neutral-500 transition hover:bg-neutral-100 hover:text-neutral-950"
               >
                 Awards
               </Link>
@@ -355,7 +355,7 @@ export default function SolutionsPage() {
               <Link
                 href="/blog"
                 onClick={() => setMobileMenuOpen(false)}
-                className="rounded-xl px-4 py-3 text-white/75 transition hover:bg-white/5 hover:text-[#b9ff68]"
+                className="rounded-xl px-4 py-3 text-neutral-600 transition hover:bg-neutral-100 hover:text-neutral-950"
               >
                 Blog
               </Link>
@@ -363,7 +363,7 @@ export default function SolutionsPage() {
               <Link
                 href="/contact"
                 onClick={() => setMobileMenuOpen(false)}
-                className="mt-2 rounded-xl bg-[#b9ff68] px-4 py-3 text-center font-semibold text-[#092016]"
+                className="mt-2 rounded-xl bg-neutral-900 px-4 py-3 text-center font-semibold text-white"
               >
                 Contact
               </Link>
@@ -373,7 +373,7 @@ export default function SolutionsPage() {
       </header>
 
       {/* HERO */}
-      <section className="relative flex min-h-[78vh] items-end overflow-hidden pt-20">
+      <section className="relative flex min-h-[78vh] items-end overflow-hidden bg-neutral-950 pt-20">
         <Image
           src="/about/large solar landscape.jpg"
           alt="Solar energy landscape"
@@ -383,18 +383,20 @@ export default function SolutionsPage() {
           className="object-cover"
         />
 
-        <div className="absolute inset-0 bg-gradient-to-b from-[#03120e]/35 via-[#03120e]/55 to-[#03120e]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/35 via-black/55 to-neutral-950" />
 
         <div className="relative z-10 mx-auto w-full max-w-7xl px-6 pb-20 lg:px-8">
           <div className="max-w-4xl">
-            <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-[#b9ff68]/20 bg-[#b9ff68]/10 px-4 py-2 text-xs font-medium uppercase tracking-[0.2em] text-[#b9ff68]">
+            <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-xs font-medium uppercase tracking-[0.2em] text-white backdrop-blur-md">
               <Sun className="h-4 w-4" />
               Our Solutions
             </div>
 
-            <h1 className="text-5xl font-semibold tracking-[-0.04em] sm:text-6xl lg:text-8xl">
+            <h1 className="text-5xl font-semibold tracking-[-0.04em] text-white sm:text-6xl lg:text-8xl">
               Energy solutions
-              <span className="block text-[#b9ff68]">for a cleaner future.</span>
+              <span className="block text-neutral-300">
+                for a cleaner future.
+              </span>
             </h1>
 
             <p className="mt-7 max-w-2xl text-base leading-7 text-white/65 sm:text-lg">
@@ -407,10 +409,10 @@ export default function SolutionsPage() {
       </section>
 
       {/* INTRO */}
-      <section className="border-y border-white/10 bg-[#071b15]">
+      <section className="border-y border-neutral-200 bg-neutral-100">
         <div className="mx-auto grid max-w-7xl gap-10 px-6 py-20 lg:grid-cols-[0.8fr_1.2fr] lg:px-8">
           <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-[#b9ff68]">
+            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-neutral-500">
               What we do
             </p>
 
@@ -420,13 +422,13 @@ export default function SolutionsPage() {
           </div>
 
           <div>
-            <p className="text-lg leading-8 text-white/65">
+            <p className="text-lg leading-8 text-neutral-600">
               Solar Nova brings together renewable generation, engineering,
               storage, construction, and operations to create practical
               energy systems for a changing world.
             </p>
 
-            <p className="mt-5 text-base leading-7 text-white/45">
+            <p className="mt-5 text-base leading-7 text-neutral-500">
               Explore our core capabilities and discover how each solution can
               support residential, commercial, industrial, and large-scale
               energy requirements.
@@ -442,7 +444,7 @@ export default function SolutionsPage() {
       >
         <div className="mb-14 flex flex-col justify-between gap-6 md:flex-row md:items-end">
           <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-[#b9ff68]">
+            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-neutral-500">
               Our capabilities
             </p>
 
@@ -451,7 +453,7 @@ export default function SolutionsPage() {
             </h2>
           </div>
 
-          <p className="max-w-md text-sm leading-6 text-white/45">
+          <p className="max-w-md text-sm leading-6 text-neutral-500">
             Select a solution to explore its capabilities, applications, and
             role in building a cleaner energy ecosystem.
           </p>
@@ -473,7 +475,7 @@ export default function SolutionsPage() {
                   duration: 0.5,
                   delay: index * 0.05,
                 }}
-                className="group overflow-hidden rounded-[2rem] border border-white/10 bg-[#071b15] text-left transition duration-300 hover:-translate-y-1 hover:border-[#b9ff68]/30"
+                className="group overflow-hidden rounded-[2rem] border border-neutral-200 bg-neutral-100 text-left transition duration-300 hover:-translate-y-1 hover:border-neutral-400"
               >
                 <div className="relative h-64 overflow-hidden">
                   <Image
@@ -484,19 +486,19 @@ export default function SolutionsPage() {
                     className="object-cover transition duration-700 group-hover:scale-105"
                   />
 
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#071b15] via-transparent to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-neutral-100 via-transparent to-transparent" />
 
-                  <div className="absolute left-5 top-5 flex h-11 w-11 items-center justify-center rounded-full border border-white/15 bg-[#03120e]/70 backdrop-blur-md">
-                    <Icon className="h-5 w-5 text-[#b9ff68]" />
+                  <div className="absolute left-5 top-5 flex h-11 w-11 items-center justify-center rounded-full border border-white/30 bg-black/65 text-white backdrop-blur-md">
+                    <Icon className="h-5 w-5" />
                   </div>
 
-                  <div className="absolute right-5 top-5 text-xs font-medium tracking-[0.2em] text-white/50">
+                  <div className="absolute right-5 top-5 text-xs font-medium tracking-[0.2em] text-white/70">
                     {solution.number}
                   </div>
                 </div>
 
                 <div className="p-7">
-                  <p className="text-[10px] font-semibold uppercase tracking-[0.25em] text-[#b9ff68]">
+                  <p className="text-[10px] font-semibold uppercase tracking-[0.25em] text-neutral-500">
                     {solution.tag}
                   </p>
 
@@ -504,16 +506,16 @@ export default function SolutionsPage() {
                     {solution.title}
                   </h3>
 
-                  <p className="mt-4 min-h-[72px] text-sm leading-6 text-white/50">
+                  <p className="mt-4 min-h-[72px] text-sm leading-6 text-neutral-500">
                     {solution.shortDescription}
                   </p>
 
-                  <div className="mt-7 flex items-center justify-between border-t border-white/10 pt-5">
-                    <span className="text-sm font-medium text-white/70">
+                  <div className="mt-7 flex items-center justify-between border-t border-neutral-200 pt-5">
+                    <span className="text-sm font-medium text-neutral-600">
                       Explore solution
                     </span>
 
-                    <span className="flex h-9 w-9 items-center justify-center rounded-full bg-white/5 transition group-hover:bg-[#b9ff68] group-hover:text-[#092016]">
+                    <span className="flex h-9 w-9 items-center justify-center rounded-full bg-neutral-200 transition group-hover:bg-neutral-900 group-hover:text-white">
                       <ArrowRight className="h-4 w-4" />
                     </span>
                   </div>
@@ -528,13 +530,13 @@ export default function SolutionsPage() {
       {selectedSolution && (
         <section
           id="solution-detail"
-          className="border-y border-white/10 bg-[#071b15]"
+          className="border-y border-neutral-200 bg-neutral-100"
         >
           <div className="mx-auto max-w-7xl px-6 py-24 lg:px-8">
             <button
               type="button"
               onClick={handleBackToSolutions}
-              className="mb-10 flex items-center gap-2 text-sm text-white/50 transition hover:text-[#b9ff68]"
+              className="mb-10 flex items-center gap-2 text-sm text-neutral-500 transition hover:text-neutral-950"
             >
               <ArrowRight className="h-4 w-4 rotate-180" />
               Back to all solutions
@@ -550,21 +552,19 @@ export default function SolutionsPage() {
                   className="object-cover"
                 />
 
-                <div className="absolute inset-0 bg-gradient-to-t from-[#03120e]/60 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
               </div>
 
               <div>
                 <div className="mb-5 flex items-center gap-3">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#b9ff68]">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-full bg-neutral-900">
                     {(() => {
                       const Icon = selectedSolution.icon;
-                      return (
-                        <Icon className="h-5 w-5 text-[#092016]" />
-                      );
+                      return <Icon className="h-5 w-5 text-white" />;
                     })()}
                   </div>
 
-                  <span className="text-xs font-semibold uppercase tracking-[0.25em] text-[#b9ff68]">
+                  <span className="text-xs font-semibold uppercase tracking-[0.25em] text-neutral-500">
                     {selectedSolution.tag}
                   </span>
                 </div>
@@ -573,7 +573,7 @@ export default function SolutionsPage() {
                   {selectedSolution.title}
                 </h2>
 
-                <p className="mt-6 text-base leading-8 text-white/60">
+                <p className="mt-6 text-base leading-8 text-neutral-600">
                   {selectedSolution.description}
                 </p>
 
@@ -581,10 +581,10 @@ export default function SolutionsPage() {
                   {selectedSolution.features.map((feature) => (
                     <div
                       key={feature}
-                      className="flex items-start gap-3 rounded-2xl border border-white/10 bg-[#03120e]/50 p-4"
+                      className="flex items-start gap-3 rounded-2xl border border-neutral-200 bg-white p-4"
                     >
-                      <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-[#b9ff68]" />
-                      <span className="text-sm text-white/70">
+                      <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-neutral-700" />
+                      <span className="text-sm text-neutral-600">
                         {feature}
                       </span>
                     </div>
@@ -592,7 +592,7 @@ export default function SolutionsPage() {
                 </div>
 
                 <div className="mt-10">
-                  <p className="text-xs font-semibold uppercase tracking-[0.2em] text-white/35">
+                  <p className="text-xs font-semibold uppercase tracking-[0.2em] text-neutral-400">
                     Applications
                   </p>
 
@@ -600,7 +600,7 @@ export default function SolutionsPage() {
                     {selectedSolution.applications.map((application) => (
                       <span
                         key={application}
-                        className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs text-white/60"
+                        className="rounded-full border border-neutral-200 bg-white px-4 py-2 text-xs text-neutral-600"
                       >
                         {application}
                       </span>
@@ -615,10 +615,10 @@ export default function SolutionsPage() {
 
       {/* APPROACH */}
       <section className="mx-auto max-w-7xl px-6 py-24 lg:px-8">
-        <div className="rounded-[2.5rem] border border-white/10 bg-[#0a2419] p-8 sm:p-12 lg:p-16">
+        <div className="rounded-[2.5rem] border border-neutral-200 bg-neutral-100 p-8 sm:p-12 lg:p-16">
           <div className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:items-center">
             <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.25em] text-[#b9ff68]">
+              <p className="text-xs font-semibold uppercase tracking-[0.25em] text-neutral-500">
                 Our approach
               </p>
 
@@ -652,15 +652,15 @@ export default function SolutionsPage() {
               ].map(([number, title, text]) => (
                 <div
                   key={number}
-                  className="rounded-2xl border border-white/10 bg-[#03120e]/40 p-6"
+                  className="rounded-2xl border border-neutral-200 bg-white p-6"
                 >
-                  <span className="text-xs font-medium text-[#b9ff68]">
+                  <span className="text-xs font-medium text-neutral-500">
                     {number}
                   </span>
 
                   <h3 className="mt-3 text-lg font-semibold">{title}</h3>
 
-                  <p className="mt-2 text-sm leading-6 text-white/45">
+                  <p className="mt-2 text-sm leading-6 text-neutral-500">
                     {text}
                   </p>
                 </div>
@@ -672,10 +672,10 @@ export default function SolutionsPage() {
 
       {/* CTA */}
       <section className="px-6 pb-24 lg:px-8">
-        <div className="mx-auto max-w-7xl overflow-hidden rounded-[2.5rem] bg-[#b9ff68]">
-          <div className="px-8 py-14 text-[#092016] sm:px-12 lg:flex lg:items-center lg:justify-between lg:px-16">
+        <div className="mx-auto max-w-7xl overflow-hidden rounded-[2.5rem] bg-neutral-900">
+          <div className="px-8 py-14 text-white sm:px-12 lg:flex lg:items-center lg:justify-between lg:px-16">
             <div className="max-w-2xl">
-              <p className="text-xs font-bold uppercase tracking-[0.25em] opacity-60">
+              <p className="text-xs font-bold uppercase tracking-[0.25em] text-white/50">
                 Start a conversation
               </p>
 
@@ -683,7 +683,7 @@ export default function SolutionsPage() {
                 Let&apos;s build a cleaner energy future.
               </h2>
 
-              <p className="mt-5 max-w-xl text-sm leading-7 opacity-70">
+              <p className="mt-5 max-w-xl text-sm leading-7 text-white/60">
                 Have a project in mind? Connect with our team to explore the
                 right renewable energy solution for your needs.
               </p>
@@ -691,7 +691,7 @@ export default function SolutionsPage() {
 
             <Link
               href="/contact"
-              className="mt-8 inline-flex shrink-0 items-center gap-3 rounded-full bg-[#092016] px-6 py-3.5 text-sm font-semibold text-white transition hover:bg-[#06150f] lg:mt-0"
+              className="mt-8 inline-flex shrink-0 items-center gap-3 rounded-full bg-white px-6 py-3.5 text-sm font-semibold text-neutral-900 transition hover:bg-neutral-200 lg:mt-0"
             >
               Talk to our team
               <ArrowRight className="h-4 w-4" />
@@ -701,18 +701,18 @@ export default function SolutionsPage() {
       </section>
 
       {/* FOOTER */}
-      <footer className="border-t border-white/10 bg-[#020d0a]">
+      <footer className="border-t border-neutral-800 bg-neutral-950">
         <div className="mx-auto max-w-7xl px-6 py-16 lg:px-8">
           <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
             {/* Brand */}
             <div className="lg:col-span-1">
               <Link href="/" className="flex items-center gap-3">
-                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#b9ff68]">
-                  <Sun className="h-5 w-5 text-[#092016]" />
+                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-white">
+                  <Sun className="h-5 w-5 text-neutral-900" />
                 </div>
 
                 <div>
-                  <div className="text-lg font-semibold tracking-tight">
+                  <div className="text-lg font-semibold tracking-tight text-white">
                     Solar Nova
                   </div>
                   <div className="text-[10px] uppercase tracking-[0.28em] text-white/40">
@@ -734,35 +734,35 @@ export default function SolutionsPage() {
               <div className="mt-5 flex flex-col gap-3">
                 <Link
                   href="/"
-                  className="text-sm text-white/45 transition hover:text-[#b9ff68]"
+                  className="text-sm text-white/45 transition hover:text-white"
                 >
                   Home
                 </Link>
 
                 <Link
                   href="/solutions"
-                  className="text-sm text-white/45 transition hover:text-[#b9ff68]"
+                  className="text-sm text-white/45 transition hover:text-white"
                 >
                   Solutions
                 </Link>
 
                 <Link
                   href="/about"
-                  className="text-sm text-white/45 transition hover:text-[#b9ff68]"
+                  className="text-sm text-white/45 transition hover:text-white"
                 >
                   About Us
                 </Link>
 
                 <Link
                   href="/blog"
-                  className="text-sm text-white/45 transition hover:text-[#b9ff68]"
+                  className="text-sm text-white/45 transition hover:text-white"
                 >
                   Blog
                 </Link>
 
                 <Link
                   href="/contact"
-                  className="text-sm text-white/45 transition hover:text-[#b9ff68]"
+                  className="text-sm text-white/45 transition hover:text-white"
                 >
                   Contact
                 </Link>
@@ -776,28 +776,28 @@ export default function SolutionsPage() {
               <div className="mt-5 flex flex-col gap-3">
                 <Link
                   href="/about"
-                  className="text-sm text-white/45 transition hover:text-[#b9ff68]"
+                  className="text-sm text-white/45 transition hover:text-white"
                 >
                   About Solar Nova
                 </Link>
 
                 <Link
                   href="/about/board-of-directors"
-                  className="text-sm text-white/45 transition hover:text-[#b9ff68]"
+                  className="text-sm text-white/45 transition hover:text-white"
                 >
                   Board of Directors
                 </Link>
 
                 <Link
                   href="/about/awards"
-                  className="text-sm text-white/45 transition hover:text-[#b9ff68]"
+                  className="text-sm text-white/45 transition hover:text-white"
                 >
                   Awards
                 </Link>
 
                 <Link
                   href="/blog"
-                  className="text-sm text-white/45 transition hover:text-[#b9ff68]"
+                  className="text-sm text-white/45 transition hover:text-white"
                 >
                   Insights & Blog
                 </Link>
@@ -811,35 +811,35 @@ export default function SolutionsPage() {
               <div className="mt-5 flex flex-col gap-3">
                 <Link
                   href="/solutions"
-                  className="text-sm text-white/45 transition hover:text-[#b9ff68]"
+                  className="text-sm text-white/45 transition hover:text-white"
                 >
                   Solar Power
                 </Link>
 
                 <Link
                   href="/solutions"
-                  className="text-sm text-white/45 transition hover:text-[#b9ff68]"
+                  className="text-sm text-white/45 transition hover:text-white"
                 >
                   Wind Energy
                 </Link>
 
                 <Link
                   href="/solutions"
-                  className="text-sm text-white/45 transition hover:text-[#b9ff68]"
+                  className="text-sm text-white/45 transition hover:text-white"
                 >
                   Hybrid Energy
                 </Link>
 
                 <Link
                   href="/solutions"
-                  className="text-sm text-white/45 transition hover:text-[#b9ff68]"
+                  className="text-sm text-white/45 transition hover:text-white"
                 >
                   Energy Storage
                 </Link>
 
                 <Link
                   href="/solutions"
-                  className="text-sm text-white/45 transition hover:text-[#b9ff68]"
+                  className="text-sm text-white/45 transition hover:text-white"
                 >
                   EPC Services
                 </Link>
