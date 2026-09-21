@@ -89,6 +89,14 @@ export default function BlogPage() {
 
           {/* Desktop Navigation */}
           <div className="hidden items-center gap-8 md:flex">
+            {/* Home */}
+            <Link
+              href="/"
+              className="text-sm text-neutral-600 transition hover:text-neutral-950"
+            >
+              Home
+            </Link>
+
             <Link
               href="/solutions"
               className="text-sm text-neutral-600 transition hover:text-neutral-950"
@@ -134,6 +142,15 @@ export default function BlogPage() {
             className="mx-auto mt-2 max-w-7xl rounded-3xl border border-neutral-200 bg-white/95 p-4 backdrop-blur-xl md:hidden"
           >
             <div className="flex flex-col gap-2">
+              {/* Home */}
+              <Link
+                href="/"
+                onClick={() => setMobileMenuOpen(false)}
+                className="rounded-2xl px-4 py-3 text-sm text-neutral-600 hover:bg-neutral-100"
+              >
+                Home
+              </Link>
+
               <Link
                 href="/solutions"
                 onClick={() => setMobileMenuOpen(false)}

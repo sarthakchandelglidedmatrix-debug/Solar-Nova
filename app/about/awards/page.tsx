@@ -85,6 +85,7 @@ export default function AwardsPage() {
       {/* NAVBAR */}
       <header className="fixed left-0 right-0 top-0 z-50 border-b border-neutral-200 bg-white/90 backdrop-blur-xl">
         <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6 lg:px-8">
+          {/* LOGO */}
           <Link href="/" className="flex items-center gap-3">
             <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-neutral-900 text-white">
               <Sun size={23} strokeWidth={2.5} />
@@ -94,43 +95,107 @@ export default function AwardsPage() {
               <div className="text-lg font-bold tracking-tight">
                 SolarNova
               </div>
+
               <div className="text-[9px] uppercase tracking-[0.28em] text-neutral-500">
                 Clean Energy
               </div>
             </div>
           </Link>
 
+          {/* NAVIGATION */}
           <nav className="hidden items-center gap-8 text-sm text-neutral-600 md:flex">
+            {/* HOME */}
             <Link
-              href="/Solution"
+              href="/"
+              className="transition hover:text-neutral-950"
+            >
+              Home
+            </Link>
+
+            {/* SOLUTIONS */}
+            <Link
+              href="/solutions"
               className="transition hover:text-neutral-950"
             >
               Solutions
             </Link>
 
-            <div className="group relative">
-              <button className="flex items-center gap-1 transition hover:text-neutral-950">
+            {/* ABOUT DROPDOWN */}
+            <div className="group relative py-7">
+              <Link
+                href="/about"
+                className="flex items-center gap-1 transition hover:text-neutral-950"
+              >
                 About
-                <span className="text-xs">⌄</span>
-              </button>
+                <span className="text-xs transition-transform duration-200 group-hover:rotate-180">
+                  ⌄
+                </span>
+              </Link>
 
-              <div className="invisible absolute left-1/2 top-full mt-4 w-56 -translate-x-1/2 rounded-2xl border border-neutral-200 bg-white p-2 opacity-0 shadow-2xl transition-all group-hover:visible group-hover:opacity-100">
+              <div className="pointer-events-none invisible absolute left-1/2 top-full mt-1 w-60 -translate-x-1/2 translate-y-2 rounded-2xl border border-neutral-200 bg-white p-2 opacity-0 shadow-2xl transition-all duration-200 group-hover:pointer-events-auto group-hover:visible group-hover:translate-y-0 group-hover:opacity-100">
+                {/* ABOUT US */}
+                <Link
+                  href="/about"
+                  className="block rounded-xl px-4 py-3 text-sm text-neutral-600 transition hover:bg-neutral-100 hover:text-neutral-950"
+                >
+                  <div className="flex items-center gap-3">
+                    <Leaf className="h-4 w-4 text-neutral-700" />
+
+                    <div>
+                      <div className="text-sm font-medium text-neutral-900">
+                        About Us
+                      </div>
+
+                      <div className="mt-0.5 text-[11px] text-neutral-400">
+                        About SolarNova
+                      </div>
+                    </div>
+                  </div>
+                </Link>
+
+                {/* BOARD OF DIRECTORS */}
                 <Link
                   href="/about/board-of-directors"
                   className="block rounded-xl px-4 py-3 text-sm text-neutral-600 transition hover:bg-neutral-100 hover:text-neutral-950"
                 >
-                  Board of Directors
+                  <div className="flex items-center gap-3">
+                    <Users className="h-4 w-4 text-neutral-700" />
+
+                    <div>
+                      <div className="text-sm font-medium text-neutral-900">
+                        Board of Directors
+                      </div>
+
+                      <div className="mt-0.5 text-[11px] text-neutral-400">
+                        Our leadership
+                      </div>
+                    </div>
+                  </div>
                 </Link>
 
+                {/* AWARDS */}
                 <Link
                   href="/about/awards"
-                  className="block rounded-xl bg-neutral-100 px-4 py-3 text-sm text-neutral-950"
+                  className="block rounded-xl bg-neutral-100 px-4 py-3 text-sm text-neutral-950 transition hover:bg-neutral-200"
                 >
-                  Awards & Certifications
+                  <div className="flex items-center gap-3">
+                    <Award className="h-4 w-4 text-neutral-700" />
+
+                    <div>
+                      <div className="text-sm font-medium text-neutral-900">
+                        Awards & Certifications
+                      </div>
+
+                      <div className="mt-0.5 text-[11px] text-neutral-400">
+                        Recognition
+                      </div>
+                    </div>
+                  </div>
                 </Link>
               </div>
             </div>
 
+            {/* BLOG */}
             <Link
               href="/blog"
               className="transition hover:text-neutral-950"
@@ -138,6 +203,7 @@ export default function AwardsPage() {
               Blog
             </Link>
 
+            {/* GET STARTED */}
             <Link
               href="/contact"
               className="rounded-full bg-neutral-900 px-5 py-2.5 font-semibold text-white transition hover:bg-neutral-700"
@@ -496,6 +562,7 @@ export default function AwardsPage() {
               className="group inline-flex items-center gap-3 rounded-full border border-neutral-300 px-6 py-3.5 font-semibold transition hover:border-neutral-500 hover:bg-neutral-100"
             >
               Meet our leadership
+
               <ArrowRight
                 size={17}
                 className="transition-transform group-hover:translate-x-1"
@@ -528,6 +595,7 @@ export default function AwardsPage() {
             className="group mt-9 inline-flex items-center gap-3 rounded-full bg-neutral-900 px-7 py-4 font-semibold text-white transition hover:bg-neutral-700"
           >
             Start a conversation
+
             <ArrowRight
               size={18}
               className="transition-transform group-hover:translate-x-1"

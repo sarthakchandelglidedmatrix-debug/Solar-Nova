@@ -131,6 +131,15 @@ export default function AboutPage() {
 
             {/* Desktop Navigation */}
             <div className="hidden items-center gap-7 md:flex">
+              {/* Home */}
+              <Link
+                href="/"
+                className="text-sm text-neutral-500 transition hover:text-neutral-900"
+              >
+                Home
+              </Link>
+
+              {/* Solutions */}
               <Link
                 href="/solutions"
                 className="text-sm text-neutral-500 transition hover:text-neutral-900"
@@ -142,7 +151,7 @@ export default function AboutPage() {
               <div className="group relative py-6">
                 <Link
                   href="/about"
-                  className="flex items-center gap-1.5 text-sm text-neutral-900"
+                  className="flex items-center gap-1.5 text-sm font-medium text-neutral-900"
                 >
                   About
 
@@ -151,8 +160,30 @@ export default function AboutPage() {
                   </span>
                 </Link>
 
-                <div className="pointer-events-none invisible absolute left-1/2 top-[62px] w-[235px] -translate-x-1/2 translate-y-2 opacity-0 transition-all duration-200 group-hover:pointer-events-auto group-hover:visible group-hover:translate-y-0 group-hover:opacity-100">
+                {/* About Dropdown - 3 OPTIONS */}
+                <div className="pointer-events-none invisible absolute left-1/2 top-[62px] w-[245px] -translate-x-1/2 translate-y-2 opacity-0 transition-all duration-200 group-hover:pointer-events-auto group-hover:visible group-hover:translate-y-0 group-hover:opacity-100">
                   <div className="rounded-2xl border border-neutral-200 bg-white/95 p-2 shadow-2xl backdrop-blur-xl">
+                    {/* About Us */}
+                    <Link
+                      href="/about"
+                      className="block rounded-xl bg-neutral-100 px-4 py-3 transition hover:bg-neutral-200"
+                    >
+                      <div className="flex items-center gap-3">
+                        <Leaf className="h-4 w-4 text-neutral-700" />
+
+                        <div>
+                          <div className="text-sm font-medium text-neutral-900">
+                            About Us
+                          </div>
+
+                          <div className="mt-0.5 text-[11px] text-neutral-400">
+                            About SolarNova
+                          </div>
+                        </div>
+                      </div>
+                    </Link>
+
+                    {/* Board */}
                     <Link
                       href="/about/board-of-directors"
                       className="block rounded-xl px-4 py-3 transition hover:bg-neutral-100"
@@ -172,6 +203,7 @@ export default function AboutPage() {
                       </div>
                     </Link>
 
+                    {/* Awards */}
                     <Link
                       href="/about/awards"
                       className="block rounded-xl px-4 py-3 transition hover:bg-neutral-100"
@@ -194,6 +226,7 @@ export default function AboutPage() {
                 </div>
               </div>
 
+              {/* Blog */}
               <Link
                 href="/blog"
                 className="text-sm text-neutral-500 transition hover:text-neutral-900"
@@ -201,6 +234,7 @@ export default function AboutPage() {
                 Blog
               </Link>
 
+              {/* Get Started */}
               <Link
                 href="/contact"
                 className="rounded-full border border-neutral-800 bg-neutral-900 px-5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-neutral-300/30 transition-all duration-300 hover:bg-neutral-700"
@@ -234,6 +268,16 @@ export default function AboutPage() {
               className="border-t border-neutral-200 py-3 md:hidden"
             >
               <div className="flex flex-col gap-1.5">
+                {/* Home */}
+                <Link
+                  href="/"
+                  onClick={() => setMenuOpen(false)}
+                  className="rounded-xl px-4 py-3 text-sm text-neutral-600 transition hover:bg-neutral-100 hover:text-neutral-900"
+                >
+                  Home
+                </Link>
+
+                {/* Solutions */}
                 <Link
                   href="/solutions"
                   onClick={() => setMenuOpen(false)}
@@ -242,14 +286,16 @@ export default function AboutPage() {
                   Solutions
                 </Link>
 
+                {/* About Us */}
                 <Link
                   href="/about"
                   onClick={() => setMenuOpen(false)}
-                  className="rounded-xl bg-neutral-100 px-4 py-3 text-sm text-neutral-900"
+                  className="rounded-xl bg-neutral-100 px-4 py-3 text-sm font-medium text-neutral-900"
                 >
-                  About
+                  About Us
                 </Link>
 
+                {/* Board */}
                 <Link
                   href="/about/board-of-directors"
                   onClick={() => setMenuOpen(false)}
@@ -258,6 +304,7 @@ export default function AboutPage() {
                   Board of Directors
                 </Link>
 
+                {/* Awards */}
                 <Link
                   href="/about/awards"
                   onClick={() => setMenuOpen(false)}
@@ -266,6 +313,7 @@ export default function AboutPage() {
                   Awards & Certification
                 </Link>
 
+                {/* Blog */}
                 <Link
                   href="/blog"
                   onClick={() => setMenuOpen(false)}
@@ -274,6 +322,7 @@ export default function AboutPage() {
                   Blog
                 </Link>
 
+                {/* Get Started */}
                 <Link
                   href="/contact"
                   onClick={() => setMenuOpen(false)}
@@ -289,7 +338,6 @@ export default function AboutPage() {
 
       {/* ================= HERO WITH SOLAR VIDEO ================= */}
       <section className="relative min-h-[650px] overflow-hidden px-6 pb-16 pt-32 lg:min-h-[700px] lg:px-8 lg:pb-20 lg:pt-36">
-        {/* Solar Video Background */}
         <div className="absolute inset-0 z-0 overflow-hidden">
           <video
             autoPlay
@@ -578,10 +626,7 @@ export default function AboutPage() {
           <div className="grid gap-10 md:grid-cols-3">
             {/* Brand */}
             <div>
-              <Link
-                href="/"
-                className="inline-flex items-center gap-2"
-              >
+              <Link href="/" className="inline-flex items-center gap-2">
                 <div className="flex h-9 w-9 items-center justify-center rounded-full border border-neutral-700 bg-neutral-800">
                   <Sun className="h-4 w-4 text-white" />
                 </div>
@@ -685,6 +730,13 @@ export default function AboutPage() {
             </div>
 
             <div className="flex flex-wrap gap-5">
+              <Link
+                href="/"
+                className="text-[11px] text-white/30 transition hover:text-white"
+              >
+                Home
+              </Link>
+
               <Link
                 href="/solutions"
                 className="text-[11px] text-white/30 transition hover:text-white"
