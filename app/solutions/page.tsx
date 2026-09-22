@@ -1,4 +1,3 @@
-
 "use client";
 
 import Image from "next/image";
@@ -7,6 +6,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import {
   ArrowRight,
+  Award,
   BatteryCharging,
   CheckCircle2,
   ChevronDown,
@@ -14,6 +14,7 @@ import {
   Menu,
   ShieldCheck,
   Sun,
+  Users,
   Wind,
   X,
   Zap,
@@ -222,17 +223,17 @@ export default function SolutionsPage() {
             className="flex items-center gap-3"
             onClick={() => setMobileMenuOpen(false)}
           >
-            <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#E6A21A] shadow-lg shadow-[#E6A21A]/20">
-              <Sun className="h-5 w-5 text-white" />
+            <div className="flex h-9 w-9 items-center justify-center rounded-full border border-[#E6A21A]/35 bg-[#F6C85F]/20">
+              <Sun className="h-4 w-4 text-[#E6A21A]" />
             </div>
 
             <div>
-              <div className="text-lg font-semibold tracking-tight text-[#3F4541]">
-                Solar Nova
+              <div className="text-base font-bold tracking-wide text-[#3F4541]">
+                Solar<span className="text-[#E6A21A]">Nova</span>
               </div>
 
-              <div className="text-[10px] uppercase tracking-[0.28em] text-[#6F756F]">
-                Renewable Energy
+              <div className="text-[8px] uppercase tracking-[0.22em] text-[#8B908A]">
+                Clean Energy
               </div>
             </div>
           </Link>
@@ -253,36 +254,81 @@ export default function SolutionsPage() {
               Solutions
             </Link>
 
-            <div className="group relative">
+            {/* About Dropdown */}
+            <div className="group relative py-6">
               <Link
                 href="/about"
-                className="flex items-center gap-1 text-sm text-[#6F756F] transition hover:text-[#E6A21A]"
+                className="flex items-center gap-1.5 text-sm font-medium text-[#3F4541]"
               >
                 About
-                <ChevronDown className="h-4 w-4" />
+
+                <span className="text-[9px] text-[#E6A21A] transition-transform duration-200 group-hover:rotate-180">
+                  ▼
+                </span>
               </Link>
 
-              <div className="invisible absolute left-0 top-full mt-4 w-52 translate-y-2 rounded-2xl border border-[#E4DED0] bg-white p-2 opacity-0 shadow-xl shadow-[#4F8A70]/10 transition-all duration-200 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100">
-                <Link
-                  href="/about"
-                  className="block rounded-xl px-4 py-3 text-sm text-[#6F756F] transition hover:bg-[#E7F0EB] hover:text-[#3F4541]"
-                >
-                  About Us
-                </Link>
+              <div className="pointer-events-none invisible absolute left-1/2 top-[62px] w-[245px] -translate-x-1/2 translate-y-2 opacity-0 transition-all duration-200 group-hover:pointer-events-auto group-hover:visible group-hover:translate-y-0 group-hover:opacity-100">
+                <div className="rounded-2xl border border-[#E4DED0] bg-[#FBFAF5]/95 p-2 shadow-xl shadow-[#4F8A70]/10 backdrop-blur-xl">
+                  {/* About Us */}
+                  <Link
+                    href="/about"
+                    className="block rounded-xl bg-[#F3EBD8] px-4 py-3 transition hover:bg-[#EDE2C8]"
+                  >
+                    <div className="flex items-center gap-3">
+                      <Leaf className="h-4 w-4 text-[#4F8A70]" />
 
-                <Link
-                  href="/about/board-of-directors"
-                  className="block rounded-xl px-4 py-3 text-sm text-[#6F756F] transition hover:bg-[#E7F0EB] hover:text-[#3F4541]"
-                >
-                  Board of Directors
-                </Link>
+                      <div>
+                        <div className="text-sm font-medium text-[#3F4541]">
+                          About Us
+                        </div>
 
-                <Link
-                  href="/about/awards"
-                  className="block rounded-xl px-4 py-3 text-sm text-[#6F756F] transition hover:bg-[#E7F0EB] hover:text-[#3F4541]"
-                >
-                  Awards
-                </Link>
+                        <div className="mt-0.5 text-[11px] text-[#8B908A]">
+                          About SolarNova
+                        </div>
+                      </div>
+                    </div>
+                  </Link>
+
+                  {/* Board */}
+                  <Link
+                    href="/about/board-of-directors"
+                    className="block rounded-xl px-4 py-3 transition hover:bg-[#F3EBD8]"
+                  >
+                    <div className="flex items-center gap-3">
+                      <Users className="h-4 w-4 text-[#4F8A70]" />
+
+                      <div>
+                        <div className="text-sm font-medium text-[#3F4541]">
+                          Board of Directors
+                        </div>
+
+                        <div className="mt-0.5 text-[11px] text-[#8B908A]">
+                          Our leadership
+                        </div>
+                      </div>
+                    </div>
+                  </Link>
+
+                  {/* Awards */}
+                  <Link
+                    href="/about/awards"
+                    className="block rounded-xl px-4 py-3 transition hover:bg-[#F3EBD8]"
+                  >
+                    <div className="flex items-center gap-3">
+                      <Award className="h-4 w-4 text-[#E6A21A]" />
+
+                      <div>
+                        <div className="text-sm font-medium text-[#3F4541]">
+                          Awards & Certification
+                        </div>
+
+                        <div className="mt-0.5 text-[11px] text-[#8B908A]">
+                          Recognition
+                        </div>
+                      </div>
+                    </div>
+                  </Link>
+                </div>
               </div>
             </div>
 
@@ -337,12 +383,23 @@ export default function SolutionsPage() {
                 Solutions
               </Link>
 
+              {/* About */}
               <Link
                 href="/about"
                 onClick={() => setMobileMenuOpen(false)}
-                className="rounded-xl px-4 py-3 text-[#6F756F] transition hover:bg-[#E7F0EB] hover:text-[#3F4541]"
+                className="rounded-xl bg-[#F3EBD8] px-4 py-3 text-[#3F4541] transition hover:bg-[#EDE2C8]"
               >
-                About
+                <div className="flex items-center gap-3">
+                  <Leaf className="h-4 w-4 text-[#4F8A70]" />
+
+                  <div>
+                    <div className="text-sm font-medium">About Us</div>
+
+                    <div className="mt-0.5 text-[11px] text-[#8B908A]">
+                      About SolarNova
+                    </div>
+                  </div>
+                </div>
               </Link>
 
               <Link
@@ -350,7 +407,10 @@ export default function SolutionsPage() {
                 onClick={() => setMobileMenuOpen(false)}
                 className="rounded-xl px-4 py-3 pl-8 text-sm text-[#6F756F] transition hover:bg-[#E7F0EB] hover:text-[#3F4541]"
               >
-                Board of Directors
+                <div className="flex items-center gap-3">
+                  <Users className="h-4 w-4 text-[#4F8A70]" />
+                  <span>Board of Directors</span>
+                </div>
               </Link>
 
               <Link
@@ -358,7 +418,10 @@ export default function SolutionsPage() {
                 onClick={() => setMobileMenuOpen(false)}
                 className="rounded-xl px-4 py-3 pl-8 text-sm text-[#6F756F] transition hover:bg-[#E7F0EB] hover:text-[#3F4541]"
               >
-                Awards
+                <div className="flex items-center gap-3">
+                  <Award className="h-4 w-4 text-[#E6A21A]" />
+                  <span>Awards & Certification</span>
+                </div>
               </Link>
 
               <Link
@@ -694,9 +757,9 @@ export default function SolutionsPage() {
               </p>
 
               <h2 className="mt-4 text-4xl font-semibold tracking-tight sm:text-5xl">
-                Let&apos;s build a{" "}
+                Let&apos;s build{" "}
                 <span className="text-[#E6A21A]">
-                  cleaner energy future.
+                  a cleaner energy future.
                 </span>
               </h2>
 
@@ -724,17 +787,17 @@ export default function SolutionsPage() {
             {/* Brand */}
             <div className="lg:col-span-1">
               <Link href="/" className="flex items-center gap-3">
-                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#E6A21A] shadow-md shadow-[#E6A21A]/20">
-                  <Sun className="h-5 w-5 text-white" />
+                <div className="flex h-9 w-9 items-center justify-center rounded-full border border-[#E6A21A]/35 bg-[#F6C85F]/20">
+                  <Sun className="h-4 w-4 text-[#E6A21A]" />
                 </div>
 
                 <div>
-                  <div className="text-lg font-semibold tracking-tight text-[#3F4541]">
-                    Solar Nova
+                  <div className="text-base font-bold tracking-wide text-[#3F4541]">
+                    Solar<span className="text-[#E6A21A]">Nova</span>
                   </div>
 
-                  <div className="text-[10px] uppercase tracking-[0.28em] text-[#6F756F]">
-                    Renewable Energy
+                  <div className="text-[8px] uppercase tracking-[0.22em] text-[#8B908A]">
+                    Clean Energy
                   </div>
                 </div>
               </Link>

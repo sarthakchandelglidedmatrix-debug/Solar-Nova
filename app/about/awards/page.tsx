@@ -1,4 +1,3 @@
-
 "use client";
 
 import Image from "next/image";
@@ -95,16 +94,16 @@ export default function AwardsPage() {
         <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6 lg:px-8">
           {/* LOGO */}
           <Link href="/" className="flex items-center gap-3">
-            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#E6A21A] text-[#3F4541] shadow-sm">
-              <Sun size={23} strokeWidth={2.5} />
+            <div className="flex h-9 w-9 items-center justify-center rounded-full border border-[#E6A21A]/35 bg-[#F6C85F]/20">
+              <Sun className="h-4 w-4 text-[#E6A21A]" />
             </div>
 
             <div>
-              <div className="text-lg font-bold tracking-tight text-[#3F4541]">
-                SolarNova
+              <div className="text-base font-bold tracking-wide text-[#3F4541]">
+                Solar<span className="text-[#E6A21A]">Nova</span>
               </div>
 
-              <div className="text-[9px] uppercase tracking-[0.28em] text-[#6F756F]">
+              <div className="text-[8px] uppercase tracking-[0.22em] text-[#8B908A]">
                 Clean Energy
               </div>
             </div>
@@ -129,77 +128,80 @@ export default function AwardsPage() {
             </Link>
 
             {/* ABOUT DROPDOWN */}
-            <div className="group relative py-7">
+            <div className="group relative py-6">
               <Link
                 href="/about"
-                className="flex items-center gap-1 transition hover:text-[#3F4541]"
+                className="flex items-center gap-1.5 text-sm font-medium text-[#3F4541]"
               >
                 About
-                <span className="text-xs text-[#4F8A70] transition-transform duration-200 group-hover:rotate-180">
-                  ⌄
+
+                <span className="text-[9px] text-[#E6A21A] transition-transform duration-200 group-hover:rotate-180">
+                  ▼
                 </span>
               </Link>
 
-              <div className="pointer-events-none invisible absolute left-1/2 top-full mt-1 w-60 -translate-x-1/2 translate-y-2 rounded-2xl border border-[#E4DED0] bg-[#FBFAF5] p-2 opacity-0 shadow-[0_20px_50px_rgba(63,69,65,0.12)] transition-all duration-200 group-hover:pointer-events-auto group-hover:visible group-hover:translate-y-0 group-hover:opacity-100">
-                {/* ABOUT US */}
-                <Link
-                  href="/about"
-                  className="block rounded-xl px-4 py-3 text-sm text-[#6F756F] transition hover:bg-[#F3EBD8] hover:text-[#3F4541]"
-                >
-                  <div className="flex items-center gap-3">
-                    <Leaf className="h-4 w-4 text-[#4F8A70]" />
+              <div className="pointer-events-none invisible absolute left-1/2 top-[62px] w-[245px] -translate-x-1/2 translate-y-2 opacity-0 transition-all duration-200 group-hover:pointer-events-auto group-hover:visible group-hover:translate-y-0 group-hover:opacity-100">
+                <div className="rounded-2xl border border-[#E4DED0] bg-[#FBFAF5]/95 p-2 shadow-xl shadow-[#4F8A70]/10 backdrop-blur-xl">
+                  {/* ABOUT US */}
+                  <Link
+                    href="/about"
+                    className="block rounded-xl bg-[#F3EBD8] px-4 py-3 transition hover:bg-[#EDE2C8]"
+                  >
+                    <div className="flex items-center gap-3">
+                      <Leaf className="h-4 w-4 text-[#4F8A70]" />
 
-                    <div>
-                      <div className="text-sm font-medium text-[#3F4541]">
-                        About Us
-                      </div>
+                      <div>
+                        <div className="text-sm font-medium text-[#3F4541]">
+                          About Us
+                        </div>
 
-                      <div className="mt-0.5 text-[11px] text-[#8A908A]">
-                        About SolarNova
-                      </div>
-                    </div>
-                  </div>
-                </Link>
-
-                {/* BOARD OF DIRECTORS */}
-                <Link
-                  href="/about/board-of-directors"
-                  className="block rounded-xl px-4 py-3 text-sm text-[#6F756F] transition hover:bg-[#F3EBD8] hover:text-[#3F4541]"
-                >
-                  <div className="flex items-center gap-3">
-                    <Users className="h-4 w-4 text-[#4F8A70]" />
-
-                    <div>
-                      <div className="text-sm font-medium text-[#3F4541]">
-                        Board of Directors
-                      </div>
-
-                      <div className="mt-0.5 text-[11px] text-[#8A908A]">
-                        Our leadership
+                        <div className="mt-0.5 text-[11px] text-[#8B908A]">
+                          About SolarNova
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </Link>
+                  </Link>
 
-                {/* AWARDS */}
-                <Link
-                  href="/about/awards"
-                  className="block rounded-xl bg-[#E7F0EB] px-4 py-3 text-sm text-[#3F4541] transition hover:bg-[#DCEAE2]"
-                >
-                  <div className="flex items-center gap-3">
-                    <Award className="h-4 w-4 text-[#E6A21A]" />
+                  {/* BOARD OF DIRECTORS */}
+                  <Link
+                    href="/about/board-of-directors"
+                    className="block rounded-xl px-4 py-3 transition hover:bg-[#F3EBD8]"
+                  >
+                    <div className="flex items-center gap-3">
+                      <Users className="h-4 w-4 text-[#4F8A70]" />
 
-                    <div>
-                      <div className="text-sm font-medium text-[#3F4541]">
-                        Awards & Certifications
-                      </div>
+                      <div>
+                        <div className="text-sm font-medium text-[#3F4541]">
+                          Board of Directors
+                        </div>
 
-                      <div className="mt-0.5 text-[11px] text-[#6F756F]">
-                        Recognition
+                        <div className="mt-0.5 text-[11px] text-[#8B908A]">
+                          Our leadership
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </Link>
+                  </Link>
+
+                  {/* AWARDS */}
+                  <Link
+                    href="/about/awards"
+                    className="block rounded-xl px-4 py-3 transition hover:bg-[#F3EBD8]"
+                  >
+                    <div className="flex items-center gap-3">
+                      <Award className="h-4 w-4 text-[#E6A21A]" />
+
+                      <div>
+                        <div className="text-sm font-medium text-[#3F4541]">
+                          Awards & Certification
+                        </div>
+
+                        <div className="mt-0.5 text-[11px] text-[#8B908A]">
+                          Recognition
+                        </div>
+                      </div>
+                    </div>
+                  </Link>
+                </div>
               </div>
             </div>
 
