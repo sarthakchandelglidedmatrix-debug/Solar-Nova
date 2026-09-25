@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useEffect, useState } from "react";
@@ -164,7 +165,6 @@ export default function Home() {
                   </span>
                 </a>
 
-                {/* About Dropdown */}
                 <div className="pointer-events-none invisible absolute left-1/2 top-[62px] w-[245px] -translate-x-1/2 translate-y-2 opacity-0 transition-all duration-200 group-hover:pointer-events-auto group-hover:visible group-hover:translate-y-0 group-hover:opacity-100">
                   <div className="rounded-2xl border border-[#E4DED0] bg-[#FBFAF5]/95 p-2 shadow-xl shadow-[#4F8A70]/10 backdrop-blur-xl">
 
@@ -239,8 +239,9 @@ export default function Home() {
                 Blog
               </a>
 
+              {/* Get Started -> Get Free Demo */}
               <a
-                href="/contact"
+                href="/get-free-demo"
                 className="rounded-full bg-[#E8B92E] px-5 py-2.5 text-sm font-semibold text-white shadow-[0_8px_24px_rgba(230,162,26,0.18)] transition hover:-translate-y-0.5 hover:bg-[#D49B16]"
               >
                 Get Started
@@ -346,8 +347,9 @@ export default function Home() {
                   Blog
                 </a>
 
+                {/* Get Started -> Get Free Demo */}
                 <a
-                  href="/contact"
+                  href="/get-free-demo"
                   onClick={() => setMenuOpen(false)}
                   className="mt-2 rounded-xl bg-[#E8B92E] px-4 py-3 text-center font-semibold text-white shadow-[0_8px_24px_rgba(230,162,26,0.16)] transition hover:bg-[#D49B16]"
                 >
@@ -953,8 +955,9 @@ export default function Home() {
               brighter future.
             </p>
 
+            {/* Get Started -> Get Free Demo */}
             <a
-              href="/contact"
+              href="/get-free-demo"
               className="inline-flex items-center gap-2 text-xs font-semibold text-[#69736D] transition hover:text-[#E8B92E]"
             >
               Get Started
